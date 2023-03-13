@@ -1,0 +1,167 @@
+
+
+
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    vertical-align: baseline;
+}
+
+a,
+blockquote,
+button,
+code,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+p,
+pre,
+select,
+span,
+sub,
+td,
+textarea,
+th {
+    font-size: 16px;
+    line-height: 20.8px
+}
+
+button {
+    border: 0
+}
+
+a,
+button,
+input[type=reset],
+input[type=submit] {
+    cursor: pointer
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+i {
+    font-style: italic
+}
+
+strong {
+    font-weight: 700
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+a img,
+img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0
+}
+
+.clear {
+    clear: both
+}
+
+img {
+    object-fit: cover!important;
+    object-position: center center!important
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+::placeholder,
+select {
+    color: #999
+}

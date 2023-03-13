@@ -1,0 +1,557 @@
+* {
+    font-family: 'Chakra Petch';
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body {
+    margin: 0px;
+}
+
+.banner_home,
+.banner_home_2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.banner_home_2 .img_banner {
+    margin-left: calc(50% - (1920px /2));
+    width: 1920px;
+    max-width: unset;
+    /* width: 100%; */
+}
+
+.img_banner {
+    width: 100%;
+}
+
+.a_banner {
+    position: absolute;
+    left: calc(50% - 71px);
+    width: 142px;
+    z-index: 1;
+    bottom: 20%;
+    height: 8%;
+}
+
+.span_banner {
+    text-align: center;
+    background: #040940;
+    border: 2.5px solid #FF0048;
+    border-radius: 12px;
+    width: 100%;
+    padding: 9px 0px;
+    height: 49px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+p.span_banner:hover {
+    background: #040940;
+    border: 2.5px solid #249ECD;
+    filter: drop-shadow(0px 0px 24px rgba(36, 158, 205, 0.64));
+    border-radius: 12px;
+}
+
+.container_body {
+    background: #1F2334;
+    padding: 80px 177px;
+    padding-bottom: 20px;
+}
+
+.title_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 43px;
+}
+
+span.text_title_home {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+span.see_all {
+    background: #323453;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 5px 15px;
+    cursor: pointer;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.list_box_ct.list_vqmm {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+
+.box_vqmm {
+    position: relative;
+    cursor: pointer;
+}
+
+img.img_bgr_vx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8%;
+}
+
+img.img_this_vx {
+    width: 60%;
+}
+
+p.text_list_vq {
+    width: 100%;
+    position: absolute;
+    bottom: 47%;
+    font-style: normal;
+    font-weight: 700;
+    display: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.home_list_game {
+    margin-top: 100px;
+}
+
+.bot_home {
+    background: url(/images/sanacc/bgr_krixi.jpg);
+    padding: 40px 177px;
+    display: flex;
+    padding-top: 0px;
+    background-size: 100% 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_mua {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.box_mua {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+p.title_box_mua {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+p.text_mua {
+    font-style: normal;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
+    font-size: 14px;
+    display: -webkit-box;
+    line-height: 18px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.box_boc {
+    padding: 10px 30px;
+    background: linear-gradient(267.81deg, rgba(255, 255, 255, 0.3) -18.36%, rgba(255, 255, 255, 0) 149.57%);
+    border-radius: 20px;
+    width: 65%;
+    position: relative;
+}
+
+.box_boc img {
+    position: absolute;
+    padding: 7px;
+    background: linear-gradient(146.2deg, #C1FC5B -50.81%, #8AC02C 28.68%, #598B02 99.13%);
+    border-radius: 22px;
+    top: 28%;
+    left: -18px;
+}
+
+.box_mua_2,
+.box_mua_4,
+.box_mua_6 {
+    justify-content: flex-end;
+}
+
+.box_img_mua {
+    margin-top: 20px;
+}
+
+.text_1,
+.text_2,
+.text_3,
+.text_4,
+.text_5,
+.text_6 {
+    text-align: center !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 21px !important;
+    color: #FFFFFF !important;
+    margin: 20px 0px !important;
+}
+
+.p_vq {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    margin: auto;
+    bottom: 10px;
+    margin: auto;
+    justify-content: center;
+}
+
+.span_vq {
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #1F2334;
+    box-shadow: 0px 4px 5px rgb(31 35 52 / 50%);
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 170px;
+}
+
+.box_vqmm:hover {
+    box-shadow: 0px 4px 10px rgb(31 31 31 / 50%);
+    border-radius: 20px;
+}
+
+.box_vqmm:hover .img_bgr_vx {
+    opacity: .5;
+}
+
+.box_vqmm:hover img.img_this_vx {
+    margin-bottom: 30%;
+}
+
+.box_vqmm:hover p.text_list_vq {}
+
+.box_vqmm:hover .p_vq {
+    display: flex;
+}
+
+.p_img {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_img_mua img {
+    width: 100%;
+    opacity: .4;
+}
+
+span.img_avatar_user img {
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+span.list_data_u p {
+    max-width: 200px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.body_mua_mb,
+.text_show_mb,
+p.text_mua.text_1,
+p.text_mua.text_2,
+p.text_mua.text_3,
+p.text_mua.text_4,
+p.text_mua.text_5,
+p.text_mua.text_6 {
+    display: none;
+}
+
+span.img_avatar_user img {
+    width: 50px;
+    height: 50px;
+}
+
+.pre_slick {
+    left: 0px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: calc(50% - 20px);
+    z-index: 1;
+}
+
+.next_slick {
+    right: 0px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .container_body {
+        padding: 50px 75px;
+    }
+
+    .bot_home {
+        padding: 20px 75px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner_home_2 .img_banner {
+        margin-left: calc(50% - (1061px /2));
+        width: 1061px;
+    }
+
+    .a_banner {
+        width: 80px;
+        height: 21px;
+        left: calc(50% - 40px);
+        bottom: 77px;
+    }
+
+    .span_banner {
+        border-radius: 6px;
+        padding: 0px;
+        line-height: 24px;
+        border: 2px solid #FF0048;
+        font-size: 12px;
+        font-weight: 400;
+        height: 30px;
+    }
+
+    p.span_banner:hover {
+        border: 2px solid #249ECD;
+        border-radius: 6px;
+    }
+
+    .container_body {
+        padding: 50px 75px;
+    }
+
+    .bot_home {
+        padding: 20px 75px;
+    }
+
+    .list_box_ct.list_vqmm {
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container_body {
+        padding: 50px 50px;
+    }
+
+    .home_list_game {
+        margin-top: 50px;
+    }
+
+    .bot_home {
+        padding: 20px 50px;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .list_box_ct.list_vqmm {
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
+
+    .body_mua {
+        display: none;
+    }
+
+    .body_mua_mb {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        gap: 20px;
+    }
+
+    .box_hd_mua {
+        width: 100%;
+    }
+
+    .title_mua {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .list_icon_hd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .list_icon_hd img {
+        width: 45px;
+        border-radius: 50%;
+        padding: 7px;
+    }
+
+    .p_active {
+        font-style: normal;
+        font-weight: 700 I !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
+        color: #4DA11E !important;
+    }
+
+    .list_icon_hd p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #e1e7ff;
+    }
+
+    .img_active {
+        border: 2px solid #4DA11E;
+    }
+
+    .text_show_mb {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .banner_home_2 .img_banner {
+        margin-left: calc(50% - (840px /2));
+        width: 840px;
+    }
+
+    .a_banner {
+        width: 68px;
+        height: unset;
+        left: calc(50% - 36px);
+        bottom: 57px;
+    }
+
+    .span_banner {
+        border-radius: 6px;
+        padding: 0px;
+        line-height: 22px;
+        border: 2px solid #FF0048;
+        font-size: 12px;
+        font-weight: 400;
+        height: 27px;
+    }
+
+    p.span_banner:hover {
+        border: 2px solid #249ECD;
+        border-radius: 6px;
+    }
+
+    .container_body {
+        padding: 50px 25px;
+    }
+
+    .bot_home {
+        padding: 20px 25px;
+    }
+
+    .list_box_ct.list_vqmm {
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
+
+    .body_mua_mb {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+
+    p.text_list_vq {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .p_vq {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        text-align: center;
+        margin: auto;
+        bottom: 4px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    img.img_this_vx {
+        width: 70%;
+    }
+
+    .span_vq {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #1F2334;
+        box-shadow: 0px 4px 5px rgb(31 35 52 / 50%);
+        border-radius: 10px;
+        padding: 7px 12px;
+        width: unset;
+        height: unset;
+    }
+
+    .box_vqmm:hover img.img_this_vx {
+        margin-bottom: 17%;
+    }
+
+    span.text_title_home {
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+.box_vqmm:hover .text_list_vq {
+    display: block;
+}

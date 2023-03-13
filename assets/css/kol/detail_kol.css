@@ -1,0 +1,274 @@
+.left_content {
+    width: 25%;
+    background: #1F2334;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 25%);
+    padding: 10px;
+}
+
+.container_list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+    padding-top: 30px;
+    align-items: flex-start;
+}
+
+.title_cate {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.list_cate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px 10px;
+    margin-bottom: 15px;
+}
+
+.this_cate {
+    text-shadow: 2px 0 0 #000;
+    margin: 0;
+    padding: 13px 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    background: rgba(0, 0, 0, .75);
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.body_list {
+    width: calc(75% - 20px);
+}
+
+.content_list {
+    background: #1f2334;
+}
+
+.intro_user {
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.list_img_detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.list_img_detail img {
+    cursor: pointer;
+    width: calc((100% / 5) - 8px);
+}
+
+.p_des p {
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.avt_kol {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.name_idol {
+    font-size: 29px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.data_lh {
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.list_img_lh {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.list_img_lh img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.date_created {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.price_thue {
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.thue_user {
+    width: 100%;
+    background: #73b009;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.popup_detail {
+    width: 100%;
+    position: fixed;
+    z-index: 201;
+    top: 0;
+    background: rgb(42 44 46 / 81%);
+    height: 100vh;
+    display: none;
+}
+
+.main_popup_detail {
+    max-width: 1200px;
+    padding: 40px;
+    width: auto;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 28px;
+    max-height: 80vh;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_full_show {
+    max-width: 100%;
+    width: auto;
+    max-height: calc(100% - 40px);
+    vertical-align: middle;
+}
+
+.box_img_show {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.close_popup {
+    /* position: absolute; */
+    top: -36px;
+    cursor: pointer;
+    right: -10px;
+    width: 40px;
+}
+
+.chat_now {
+    background: #f0564a;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 26px;
+}
+
+.box_btn_kol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container_list {
+        padding: 30px 20px 0;
+        flex-direction: column;
+    }
+
+
+    .left_content {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .body_list {
+        width: 100%;
+    }
+
+    .avt_kol {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .thue_user {
+        width: max-content;
+        /* margin: auto; */
+    }
+
+    .chat_now {
+        width: max-content;
+        /* margin: auto; */
+    }
+
+    .box_btn_kol {
+        flex-direction: unset;
+        justify-content: center;
+    }
+}

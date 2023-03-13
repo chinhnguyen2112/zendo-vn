@@ -1,0 +1,2024 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* css chung */
+
+html {
+    font-family: "Chakra Petch", sans-serif;
+}
+
+div#main {
+    background: url(https://verestino.com/images/vqlq/bgr_new.jpg) center center/cover no-repeat;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.col-half {
+    width: 50%;
+}
+
+
+/* css header */
+
+.header {
+    height: 60px;
+    background: #222339;
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+
+/* css content */
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 193.9393939394vh;
+    height: 100%;
+}
+
+
+/* title box */
+
+.title_box {
+    margin-top: 6vh;
+}
+
+.title_box_container {
+    padding: 2vh 0vh;
+    width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title_box_container .span_list_btn {
+    text-decoration: none;
+    color: #fff;
+    width: 19vh;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8vh;
+    /* line-height: 2.8vh; */
+    padding: 1.5vh;
+    background: url(https://verestino.com/images/vqlq/box_hd.png);
+    background-size: 100% 100%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_box_container .span_list_btn:hover {
+    background: url(https://verestino.com/images/vqlq/hv_khung.png);
+    background-size: 100% 100%;
+}
+
+
+/* css notice bar */
+
+.notice_bar {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 11vh;
+    margin: auto;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    background: rgba(11, 10, 29, 0.5);
+}
+
+.notice_bar span {
+    font-weight: 600;
+    font-size: 2vh;
+    visibility: visible;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 21px;
+    color: #fff;
+}
+
+
+/* css choose spin tablet */
+
+.choose_spin_tablet {
+    display: none;
+    margin-top: 2vh;
+    text-align: center;
+    padding: 1vh 2vh;
+    background: url(https://verestino.com/images/vqlq/tablet_sl.png);
+    background-size: 100% 100%;
+}
+
+.choose_spin_tablet select {
+    font-size: 2vh;
+    color: #fff;
+    width: 100%;
+    padding: 0.8vh 2vh;
+    border-radius: 5px;
+    background: #e67300;
+    text-align: center;
+}
+
+
+/* css box spin */
+
+.box_spin {
+    display: flex;
+    padding: 2vh 0vh;
+    padding-top: 4vh;
+    /* max-width: 1520px; */
+    /* margin: auto; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-left {
+    position: relative;
+    display: flex;
+    width: 50%;
+    padding: 0px 36px -4px 0px;
+    align-items: flex-start;
+}
+
+.header-title {
+    display: flex;
+    width: 20vh;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    /* margin-bottom: 30vh; */
+}
+
+.get-free-spin {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 20vh;
+    position: relative;
+}
+
+.get-free-spin p {
+    margin-left: 11px;
+    line-height: 1vh;
+}
+
+.get-free-spin p .span_them_luot {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.8vh;
+    line-height: 3vh;
+    text-decoration: none;
+}
+
+.headphone-icon {
+    position: absolute;
+    top: 1vh;
+    width: 5vh;
+    left: 26vh;
+}
+
+.box_vip_1 {
+    background: url(https://verestino.com/images/vqlq/vp_vip.png);
+    background-size: 100% 100%;
+}
+
+.box_vip_2 {
+    background: url(https://verestino.com/images/vqlq/vp_vip.png);
+    background-size: 100% 100%;
+}
+
+.box_vip_3 {
+    background: url(https://verestino.com/images/vqlq/vp_vip.png);
+    background-size: 100% 100%;
+}
+
+.box_vip_1 img,
+.box_vip_2 img,
+.box_vip_3 img {
+    width: 64%;
+    height: auto;
+    margin-top: 2.6vh;
+    margin-left: 1.8vh;
+}
+
+.text-col2 {
+    display: flex;
+}
+
+.text-col2 p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 600;
+}
+
+.text-col2 a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 21px;
+    font-weight: 600;
+    padding: 12px 10px 10px 10px;
+    background: rgba(11, 10, 29, 0.8);
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.text-col2 a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.buy-turn-tablet .buy-turn {
+    display: none;
+}
+
+
+/* css rotation box */
+
+.spin-img {
+    position: relative;
+    margin-left: auto;
+    margin-top: 1vh;
+    /* min-width: 822px; */
+}
+
+.spin-img .img_spin_img {
+    width: 100%;
+    /* animation: mymove 5s;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: both; */
+}
+
+.text-spin {
+    text-align: center;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.text-spin p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3vh;
+    line-height: 1.6vh;
+}
+
+.text-spin p span {
+    color: #fe9e1f;
+}
+
+.text-spin h1 {
+    font-weight: 700;
+    font-size: 3vh;
+    line-height: 4vh;
+    color: #fe9e1f;
+}
+
+.text-spin .spin-btn,
+.spin_btn_none {
+    background-image: url(https://verestino.com/images/vqlq/play_now.png);
+    background-size: 100% 100%;
+    margin-top: 0.2vh;
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 0.5vh;
+    padding: 0vh 3vh;
+    z-index: 11;
+    cursor: pointer;
+    justify-content: center;
+    /* border: 1px solid #9ed441; */
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0px 1vh 0px 1vh;
+    align-items: center;
+    line-height: 5vh;
+    min-width: 145px;
+}
+
+.text-spin .spin-btn:hover {
+    background: url(https://verestino.com/images/vqlq/hv_play.png);
+    background-size: 100% 100%;
+}
+
+.spin_btn_none {
+    background: url(https://verestino.com/images/vqlq/hv_play.png) !important;
+    background-size: 100% 100% !important;
+}
+
+.tam_play {
+    background-image: url(https://verestino.com/images/vqlq/play_now.png) !important;
+}
+
+.text-spin .spin-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 10px;
+}
+
+.check-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-box input {
+    width: 2vh;
+    height: 2vh;
+    margin-right: 10px;
+}
+
+.check-box span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2vh;
+    line-height: 2.3vh;
+}
+
+.box-right {
+    width: 24%;
+    /* min-width: 61vh; */
+    max-height: 52vh;
+    text-align: center;
+    background: url(https://verestino.com/images/vqlq/board.png);
+    background-size: 100% 100%;
+    margin-bottom: 12vh;
+}
+
+.choose_spin {
+    padding: 2vh;
+    padding-bottom: 3vh;
+}
+
+.game-board {
+    padding: 1vh;
+    padding-top: 3vh;
+}
+
+.game-board p {
+    padding: 1vh;
+    background: rgba(11, 10, 29, 0.8);
+}
+
+.li_type_lq {
+    display: flex;
+    text-transform: uppercase;margin: 0.5vh 0;
+    height: 4.3vh;
+    cursor: pointer;
+    padding: 1vh;
+    list-style-type: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    justify-content: flex-start;
+    align-items: center;
+text-decoration: unset;}
+
+.game-board p {
+    font-weight: 700;
+    font-size: 2vh;
+    line-height: 2vh;
+    color: #fff;
+}
+
+.span_type_lq {
+    font-weight: 700;
+    font-size: 2vh;
+    line-height: 2vh;
+    color: #ffffff;
+    padding-left: 1.5vh;
+    text-decoration: none;
+}
+
+.li_type_lq {
+    background: rgba(105, 105, 105, 0.5);
+}
+
+.game-board li:hover {
+    background: #e67300;
+}
+
+.game-board li:hover .span_type_lq {
+    color: #fff;
+}
+
+.backg-orange {
+    background: #e67300;
+}
+
+.game-board .backg-orange .span_type_lq {
+    color: #fff;
+}
+
+.row_next_page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(https://verestino.com/images/vqlq/next-page.png);
+    background-size: 100% 100%;
+    margin: 0 10px;
+    margin-bottom: 50px;
+}
+
+.row_next_page p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.buy-turn {
+    padding: 2vh;
+    background: url(https://verestino.com/images/vqlq/buy-turn.png) center center/cover no-repeat;
+    background-size: 100% 100%;
+    height: 7vh;
+    display: flex;
+    width: 81%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.buy-turn .buy_luot {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.1vh;
+    cursor: pointer;
+    line-height: 2.3vh;
+    height: 2vh;
+    text-decoration: none;
+}
+
+
+/* gift-items */
+
+.list_left_vq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box_vip_1,
+.box_vip_2,
+.box_vip_3 {
+    width: 10vh;
+    height: 12vh;
+    position: relative;
+    margin: 2vh 0vh;
+}
+
+.spin-btn span,
+.spin_btn_none span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8vh;
+    /* line-height: initial; */
+    /* text-transform: uppercase; */
+    color: #000000;
+    cursor: pointer;
+}
+
+.muiten_quay {
+    right: -2vh;
+    position: absolute;
+    border-radius: 100px;
+    top: calc(50% - 3.6vh);
+}
+
+img.img_muiten {
+    width: 8vh;
+}
+
+.flip_show {
+    position: absolute;
+}
+
+.lienhe {
+    display: none !important;
+}
+
+.box_noti_gif {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.4);
+    top: 0px;
+    padding-top: 130px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    z-index: 23;
+    display: none;
+}
+
+.body_gif {
+    width: 500px;
+    margin: auto;
+    background: #212333;
+    color: #fbfbfb;
+    max-height: 80%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* width: 720px; */
+    height: auto;
+    /* background: #FBFBFB; */
+    margin: 0 auto;
+    box-shadow: 0px 24px 32px 8px rgb(0 0 0 / 5%);
+    flex-direction: column;
+}
+
+.title_noti_gif {
+    background: #0040ff;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    padding: 10px 20px;
+    background: #73b009;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 700;
+}
+
+span.noti_title_gif {
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.box_close_gif {
+    /* background: #73b009; */
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex: 0 15%;
+    padding: 20px 50px;
+    font-size: 20px;
+    color: #fff;
+    justify-content: space-around;
+}
+
+span.span_close_gif {
+    background: #73b009;
+    padding: 8px 20px;
+    width: 40%;
+    max-width: 150px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.type_gif {
+    text-align: center;
+}
+
+p.happy_gif {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 32px;
+    /* identical to box height */
+    /* text-transform: uppercase; */
+    color: #ffcd00;
+}
+
+p.detail_gif {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height */
+    /* text-transform: uppercase; */
+    color: #9692df;
+}
+
+.box_this_gif img {
+    width: 30%;
+    margin: auto;
+    height: auto;
+}
+
+.box_this_gif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    margin-top: 10px;
+    /* min-height: 74px; */
+}
+
+p.name_gif {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #9692df;
+}
+
+.body_noti_gif {
+    padding: 10px 10px 8px 10px;
+    background: #212333;
+    max-height: 88%;
+    /* min-width: 800px; */
+    overflow: auto;
+}
+
+.get-free-spin img {
+    width: 4vh;
+    height: 4vh;
+}
+
+.headphone-icon img {
+    width: 4vh;
+}
+
+.icon_notice img {
+    width: 4vh;
+}
+
+.slick-list.draggable {
+    /* padding: 0px 5vh !important; */
+}
+
+.spin-btn::selection,
+.spin_btn_none::selection {
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    pointer-events: none;
+}
+
+.spin-btn span,
+.spin_btn_none span {
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+.spin-img .img_spin_img {
+    pointer-events: none;
+}
+
+.rotation_box {
+    /* margin: 7vh -15vh -7vh 15vh; */
+    margin-left: 15vh;
+    /* margin-right: -15vh; */
+}
+
+img.mute_audio {
+    position: absolute;
+    left: -2px;
+    top: 0;
+}
+
+.gift_luotquay500k,
+.gift_luotquay200k,
+.gift_luotquay100k,
+.gift_luotquay50k,
+.gift_luotquay20k,
+.gift_luotquay9k {
+    display: none;
+}
+
+.history_gif {
+    width: 751px;
+}
+
+.table_his {
+    width: 100%;
+    overflow: auto;
+    min-width: 700px;
+    border-spacing: 0px;
+}
+
+.table_his td {
+    text-align: center;
+    border: 0.1px solid #858585;
+    padding: 10px;
+    font-size: 14px;
+}
+
+thead.thead_his td {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.td_stt {
+    width: 43px;
+}
+
+.popup_hisory,
+.popup_free,
+.popup_huong_dan,
+.popup_quy_tac,
+.popup_nhiem_vu,
+.popup_buy_turn,
+.popup_load,
+.popup_sucess,
+.popup_error,
+.popup_confirm,
+.popup_happy {
+    display: none;
+}
+
+.popup_play {
+    display: none;
+    background: unset !important;
+}
+
+.div_close {
+    position: relative;
+    margin-top: 1.5vh;
+    float: right;
+    height: 4.5vh;
+    display: flex;
+}
+
+span.close_page {
+    cursor: pointer;
+    margin: auto;
+    padding: 1vh 2vh;
+    margin-left: 2vh;
+    width: 15vh;
+    display: flex;
+    height: 100%;
+    background: url(https://verestino.com/images/vqlq/close_home.png);
+    font-style: normal;
+    font-weight: 600;
+    background-size: 100% 100%;
+    font-size: 1.8vh;
+    line-height: inherit;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_free .body_noti_gif {
+    /* padding-bottom: 30px; */
+}
+
+.div_img_noti {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    /* margin-top: -18px; */
+    align-items: center;
+}
+
+.box_left_img {
+    display: flex;
+}
+
+img.img-small {
+    margin-top: 28px;
+    width: 23px;
+}
+
+.popup_free .detail_gif {
+    /* margin-top: 20px; */
+}
+
+p.cac_buoc {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fa8c04;
+    text-align: left;
+    line-height: 25px;
+}
+
+p.text_cacbuoc {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.popup_huong_dan .body_noti_gif {
+    padding-bottom: 0px;
+}
+
+.cac_buoc span {
+    color: #fff;
+    font-weight: 400;
+}
+
+p.nav_cac_buoc {
+    color: #fa8c04;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.nav_cac_buoc span {
+    font-weight: 400;
+    color: #fff;
+}
+
+p.nav_nav_cac_buoc {
+    padding-left: 20px;
+}
+
+p.nav_nav_cac_buoc {
+    font-size: 18px;
+    text-align: left;
+    color: #73b009;
+}
+
+p.nav_nav_text_cac_buoc {
+    padding-left: 60px;
+    text-align: left;
+}
+
+.popup_nhiem_vu p {
+    font-size: 18px;
+    text-align: left;
+}
+
+.box_list_buy {
+    display: flex;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box_list_buy span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 45px;
+    /* identical to box height */
+    color: #9692df;
+}
+
+.inp_ck {
+    margin-right: 20px;
+}
+
+select#select_luot {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background: #73b009;
+    font-weight: 700;
+    color: #fdf6ee;
+    text-align: center;
+}
+
+.popup_buy_turn .box_text_noti {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.box_type_buy {
+    display: none;
+}
+
+.buy_now {
+    background: #e67300 !important;
+}
+
+select#select_luot option {
+    font-weight: 700;
+    color: #fdf6ee;
+}
+
+.loading_body {
+    background: none;
+    box-shadow: none;
+    height: 100%;
+    align-items: center;
+}
+
+.loading_body img {
+    background: none;
+}
+
+.box_select {
+    margin-bottom: 10px;
+}
+
+.nav_noti_add {
+    bottom: 0.1vh;
+    position: absolute;
+    left: 2.5vh;
+    display: none;
+}
+
+.nav_noti_add span {
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+    width: 1vh;
+    font-size: 1.3vh;
+    height: 1vh;
+    padding: 0px 0.7vh;
+    line-height: initial;
+}
+
+.popup_free {
+    padding-top: 200px;
+}
+
+.body_gif_nav {
+    text-align: center;
+}
+
+.box_close_gif_buy {
+    padding: 20px 5px;
+    font-size: 18px;
+}
+
+.box_close_gif_buy span.span_close_gif {
+    padding: 8px 5px;
+}
+
+.box_count_turn img {
+    width: 10vh;
+    display: none;
+    z-index: 1;
+}
+
+.box_count_turn {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+span.span_count_play {
+    /* margin-left: -3.6vh; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8vh;
+    line-height: 5vh;
+    /* identical to box height */
+    margin-bottom: 3px;
+    min-width: 144px;
+    text-align: right;
+    display: flex;
+    color: #000000;
+    background: url(https://verestino.com/images/vqlq/play_now.png);
+    background-size: 100% 100%;
+    /* border: 1px solid #9ed441; */
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0px 1vh 0px 1vh;
+    align-items: center;
+    justify-content: center;
+}
+
+img.img_rank_center {
+    position: absolute;
+    width: 29%;
+    top: 35%;
+    left: 36%;
+}
+
+.list_box_vp {
+    margin-top: 7vh;
+}
+
+.vp_2,
+.vp_3 {
+    display: none;
+}
+
+.box_vip_1 p,
+.box_vip_2 p,
+.box_vip_3 p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4vh;
+    position: absolute;
+    line-height: 2vh;
+    /* identical to box height, or 150% */
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    bottom: -2vh;
+    left: 2vh;
+}
+
+img.img_box_uudai {
+    margin-bottom: -2px;
+    margin-right: 5px;
+}
+
+.box_text_noti a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #73b009;
+}
+
+td a {
+    color: #73b009;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+td span {
+    border-radius: 5px;
+    margin: 0px 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: 127px;
+    background: #73b009;
+}
+
+p.happy_gif a {
+    color: #00f110;
+    text-decoration: auto;
+}
+
+/* css mua lÆ°á»£t quay */
+.popup_buy_spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 20;
+}
+
+.body_buy_spin {
+    position: relative;
+    width: 700px;
+    height: auto;
+    background: url(https://verestino.com/images/vqlq/back2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.close_buy_spin {
+    position: absolute;
+    right: 0;
+    top: -16px;
+    cursor: pointer;
+}
+
+.title_buy_spin {
+    text-align: center;
+    margin-bottom: 35px;
+    background: url(https://verestino.com/images/vqlq/back_tit.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    
+}
+
+.title_buy_spin span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+}
+
+.buy_spin_container {
+    padding: 65px 100px;
+}
+
+.box_buy_spin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box_buy_spin .left_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    background: url(https://verestino.com/images/vqlq/back_1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+}
+
+.box_buy_spin .left_box img {
+    width: 133px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box_buy_spin .left_box span {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+}
+
+.box_buy_spin .right_box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.div_select {
+    background: url(https://verestino.com/images/vqlq/back_input.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 8px;
+}
+
+.div_select .select2-container {
+    width: 100% !important;
+}
+
+.box_buy_spin .right_box select {
+    width: 100%;
+    padding: 10px;
+    color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ .select2-results {
+    background: #06155B;
+    color: #fff;
+}
+
+.buy_spin_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+margin: 0px 30px;margin-top: 16px;}
+
+.buy_spin_btn p {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buy_by_vnd {
+    margin-bottom: 16px;
+    padding: 13px;
+    background: url(https://verestino.com/images/vqlq/back_btn1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.buy_by_zen {
+    padding: 13px;
+    background: url(https://verestino.com/images/vqlq/back_btn2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.text_buy_free{
+    font-size: 15px;
+    color: #fff;
+text-align: center;padding: 0px 10px;}
+.sl_luotquay_20k,.sl_luotquay_9k,.sl_luotquay,.buy_spin_btn{
+    display: none;
+}
+
+
+#fb-root{
+    display: none !important;
+}
+
+
+.paused {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+
+@media only screen and (max-width: 1440px) {
+    .choose_spin {
+        padding: 11px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1024px) {
+    .box_spin {
+        margin: 0vh 2.8vh 0vh 2.8vh;
+        padding-top: 0;
+    }
+    .box-left {
+        width: 100%;
+        /* max-width: 822px; */
+        flex-direction: column;
+    }
+    .title_box_container {
+        width: 96%;
+    }
+    .box-right {
+        display: none;
+    }
+    .choose_spin_tablet {
+        display: flex;
+        /* justify-content: center; */
+        height: 60px;
+        margin: auto;
+        align-items: center;
+        padding-bottom: 13px;
+        margin-top: 0vh;
+        padding-top: 9px;
+        width: 50%;
+    }
+    .buy-turn-tablet .buy-turn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        padding: 1vh 2vh;
+        height: 41px;
+    }
+    .buy-turn .buy_luot {
+        font-size: 1.2vh;
+        height: 1.5vh;
+        line-height: 1.5vh;
+    }
+    .get-free-spin {
+        align-items: center;
+    width: 50%;}
+    .header-title {
+        width: 100%;
+        flex-direction: initial;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+    .text-col2 {
+        align-items: center;
+    }
+    .spin-img {
+        /* margin: 30px 25px 0 30px; */
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .box-gift {
+        padding: 0.5vh;
+    }
+    .active_gif {
+        width: 16vh;
+        left: calc(50% - 8vh);
+        /* top: 46px; */
+    }
+    .gift-item {
+        height: auto;
+    }
+    .rotation_box {
+        margin-top: 0vh;
+    }
+    .text-spin p {
+        font-size: 1.2vh;
+    }
+    .title_box_container .span_list_btn {
+        width: 13vh;
+        font-size: 1.3vh;
+        padding: 0vh;
+        height: 49px;
+    }
+    .notice_bar span {
+        font-size: 1.5vh;
+    }
+    .icon_notice img {
+        width: 3vh;
+    }
+    img.img_hide,
+    .flip_show {
+        height: 12vh;
+    }
+    .rotation_box {
+        margin-left: 0vh;
+        margin-right: 0vh;
+    }
+    .div_close {}
+    span.close_page {}
+    .list_box_vp {
+        width: 100%;
+        display: flex;
+        display: none;
+        justify-content: space-evenly;
+    }
+    img.mute_audio {
+        left: 0px;
+    }
+    .headphone-icon {
+        left: 0;
+        top: 97px;
+    }
+    .get-free-spin p .span_them_luot {
+        font-size: 1.2vh;
+        line-height: 2vh;
+    }
+    .get-free-spin img {
+        width: 3vh;
+        height: 3vh;
+    }
+    .headphone-icon img {
+        width: 3vh;
+    }
+    .box_vip_1,
+    .box_vip_2,
+    .box_vip_3 {
+        width: 8vh;
+        height: 8vh;
+        margin: 1vh 0;
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none,
+    span.span_count_play {
+        width: 184px;
+    }
+
+    .div_select .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .title_box_container {
+        padding: 2vh 1vh 0.8vh 1vh;
+    }
+    .title_box_container .span_list_btn {
+        width: 12vh;
+        /* padding: 1vh; */
+        height: 35px;
+    }
+    .notice_bar span {
+        font-size: 1.2vh;
+        line-height: 1.9vh;
+    }
+    .text-col2 p {
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .text-col2 a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .box_spin {
+        /* padding: 47px 20px 33px 30px; */
+    }
+    .buy-turn .buy_luot {
+        font-size: 1.2vh;
+        /* line-height: 1.9vh; */
+    }
+    .spin-img {
+        /* margin: 30px -10px 0 -20px; */
+        margin-top: 2.5vh;
+    }
+    .text-spin {
+        /* bottom: 17px; */
+        /* left: 33%; */
+    }
+    .none-on-res {
+        display: none;
+    }
+    .spin-img,
+    .box-left {
+        /* max-width: unset; */
+        /* min-width: unset; */
+    }
+    .slick-list.draggable {
+        padding: 0px 0vh !important;
+    }
+    .box_vip_1,
+    .box_vip_2,
+    .box_vip_3 {
+        width: 7vh;
+        height: 7vh;
+    }
+    .choose_spin_tablet {
+        margin-top: 15px;
+        height: 55px;
+    }
+}
+
+
+/* mobile */
+
+@media (min-width: 568px) and (max-width: 991.98px) and (max-height: 599px) {
+    .spin-img {
+        margin-top: -34px;
+        width: 65vh;
+    }
+    .check-box input {
+        margin-right: 1vh;
+    }
+    .text-spin p {
+        line-height: 2vh;
+    }
+    .title_box_container .span_list_btn {
+        width: 27vh;
+    }
+    .notice_bar span {
+        font-size: 2vh;
+    }
+    .title_box_container .span_list_btn {
+        font-size: 2vh;
+        line-height: 10px;
+    }
+    .box_spin {
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .title_box_container {
+        flex-wrap: wrap;
+        padding: 20px 10px 5px 10px;
+    }
+    .title_box_container .span_list_btn {
+        width: 36%;
+        padding: 10px;
+        margin-bottom: 6px;
+        height: 35px;
+        line-height: 10px;
+        /* line-height: inherit; */
+    }
+    .choose_spin_tablet {
+        height: 40px;
+        margin: auto;
+        padding: 10px;
+        width: 88%;
+        margin: 0px 19px;
+        margin-top: 0px;
+        margin-top: -7px;
+        padding-bottom: 13px;
+    }
+    .choose_spin_tablet select {
+        padding: 0px 18px;
+        height: 27px;
+        font-size: 12px;
+        line-height: 16px;
+        /* width: 93%; */
+    }
+    .header-title {
+        flex-wrap: wrap;
+        padding: 0 10px;
+        align-items: flex-start;
+        margin-top: 0px;
+    }
+    .buy-turn-tablet .buy-turn {
+        margin-left: 150px;
+        margin-top: 10px;
+    }
+    .headphone-icon {
+        top: 50px;
+        z-index: 1;
+        left: 10px;
+    }
+    .get-free-spin p .span_them_luot {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .text-col2 p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .text-col2 a {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .buy-turn-tablet .buy-turn {
+        margin: auto;
+        padding: 0;
+        height: 100%;
+        width: unset;
+        padding-top: 2px;
+    }
+    .text-spin p {
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+        margin: auto;
+        width: max-content;
+    }
+    .text-spin h1 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none {
+        /* width: 86%; */
+        /* height: 25px; */
+        /* padding: 6px; */
+    }
+    .text-spin .spin-btn a {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 9px;
+    }
+    .check-box input {
+        width: 15px;
+        height: 15px;
+    }
+    .check-box span {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .text-spin {
+        /* bottom: 11px; */
+        /* left: 32%; */
+        margin-top: 10px;
+        /* justify-content: space-around; */
+        /* text-align: center; */
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none {
+        /* margin-bottom: 8px; */
+    }
+    .box_count_turn {
+        margin-right: 15px;
+    }
+    .spin-btn {
+        margin-left: 15px;
+    }
+    .box-gift-items {
+        padding: 15px 0;
+        height: unset;
+    }
+    .box-gift-items img {
+        width: 55px;
+        height: 55px;
+    }
+    .gift-item-special {
+        padding: 20px;
+    }
+    .gift-item p,
+    .gift-item-special p {
+        font-size: 8px;
+        margin-top: 17px;
+        line-height: 10px;
+    }
+    .spin-btn::selection,
+    .spin_btn_none::selection {
+        -moz-user-select: none !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -khtml-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        pointer-events: none;
+    }
+    .spin-btn span,
+    .spin_btn_none span {
+        font-size: 11px;
+        -moz-user-select: none !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -khtml-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        /* line-height: 13px; */
+        user-select: none !important;
+    }
+    .spin-img .img_spin_img {
+        pointer-events: none;
+    }
+    .lienhe {
+        display: none !important;
+    }
+    .box_noti_gif {
+        width: 100%;
+    }
+    .body_gif {
+        width: 90% !important;
+    }
+    .box-gift {
+        margin: 0px 10px;
+        height: 111px;
+    }
+    .box-gift-items img {
+        /* height: 48px; */
+    }
+    .gift-item {
+        padding-top: 8px;
+    }
+    .active_gif {
+        height: calc(100% - 30px);
+        top: 14px;
+    }
+    .icon_notice img {
+        width: 2vh;
+    }
+    .buy-turn-tablet {
+        width: 135px;
+        margin-bottom: 5px;
+        height: 34px;
+    }
+    .spin-img {
+        margin-top: -12px;
+        width: 85%;
+    }
+    .slick-arrow {
+        height: 30px !important;
+    }
+    .buy-turn .buy_luot {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .box_spin {
+        padding: 0px;
+        margin: 0px 5px;
+        margin-top: 15px;
+    }
+    .rotation_box {
+        margin-top: 21px;
+        width: 100%;
+    }
+    span.noti_title_gif {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .icon_notice {
+        display: flex;
+    }
+    .notice_bar {
+        /* width: max-content; */
+        top: 119px;
+        font-size: 19px;
+        overflow: hidden;
+    }
+    .notice_bar span {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    div#main {
+        /* height: 95vh; */
+    }
+    .nav_noti_add {
+        bottom: 10px;
+        left: 16px;
+    }
+    span.span_close_gif {
+        width: 44%;
+        padding: 8px 0px;
+        max-width: unset;
+    }
+    .box_close_gif {
+        padding: 20px 10px;
+    }
+    .box_list_buy span {
+        font-size: 16px;
+    }
+    .box_close_gif.box_close_gif_buy {
+        flex-wrap: wrap;
+    }
+    .buy_now,
+    .buy_zen {
+        margin-bottom: 10px;
+    }
+    .div_close {
+        display: flex;
+        width: 100%;
+        padding: 0px 10px;
+        margin-top: 4px;
+        justify-content: space-between;
+    }
+    span.close_page {
+        font-size: 11px;
+        margin-left: 0px;
+        width: 14vh;
+        margin-right: 0px;
+    }
+    .box_vip_1 img,
+    .box_vip_2 img,
+    .box_vip_3 img {
+        margin-top: 9px;
+        margin-left: 10px;
+    }
+    .title_box {
+        margin: 10px 0px;
+    }
+    .popup_happy .div_img_noti {
+        min-height: 140px !important;
+    }
+    .popup_happy .happy_gif {
+        margin-bottom: 10px !important;
+        font-size: 13px !important;
+    }
+    .popup_happy .happy_gif span {
+        font-size: 13px !important;
+    }
+    .popup_happy .img_gif_this {
+        margin-top: 30px !important;
+    }
+    .popup_happy {
+        padding-top: 150px;
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none,
+    span.span_count_play {
+        width: unset;
+    }
+
+    .body_buy_spin {
+        width: 95%;
+
+    }
+
+    .close_buy_spin {
+        width: 45px;
+    }
+
+    .buy_spin_container {
+        padding: 50px 35px;
+    }
+
+    .title_buy_spin {
+        padding: 7px;
+    }
+
+    .title_buy_spin span,
+    .box_buy_spin .right_box select,
+    .buy_spin_btn p {
+        font-size: 11px;
+    }
+
+    .box_buy_spin .left_box {
+        width: 44%;
+        padding: 10px;
+    }
+
+    .box_buy_spin .left_box img {
+        width: 100px;
+    }
+
+    .box_buy_spin .left_box span {
+        font-size: 9px;
+    }
+
+    .box_buy_spin .right_box {
+        width: 54%;
+    }
+
+    .div_select {
+        padding: 6px;
+    }
+
+    .div_select .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: 12px;
+    }
+    .buy_spin_btn {
+        margin: 0;
+        margin-top: 16px;
+    }
+    .buy_by_vnd, .buy_by_zen {
+width:46%
+}
+    
+
+}
+
+@media only screen and (max-width: 426px) {
+    .box_buy_spin .left_box {
+        display: none;
+    }
+
+    .box_buy_spin .right_box {
+        width: 100%;
+    }
+
+    .title_buy_spin {
+        margin-bottom: 18px;
+        padding: 10px;
+    }
+
+    .div_select {
+        padding: 9px;
+    }
+
+    .select2-results .select2-results__option {
+        font-size: 11px !important;
+    }
+
+    .buy_spin_btn {
+       flex-direction: row;
+
+    }
+
+    .buy_by_vnd {
+        margin-right: 10px;
+        margin-bottom: 0;
+        padding: 13px 20px;
+    }
+
+    .buy_by_zen {
+        padding: 13px 20px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 380px) {
+    .box_spin {
+        /* padding: 10px; */
+    }
+    .spin-img {
+        /* margin-left: -10px; */
+        margin: auto;
+        width: 90%;
+        /* margin: unset; */
+    }
+    .text-spin {
+        /* bottom: 8px; */
+        /* width: 30%; */
+        /* left: 35%; */
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+
+    .buy_spin_container {
+        padding: 50px 27px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .title_box_container .span_list_btn {
+        width: 36%;
+        /* width: 100%; */
+        height: 22px;
+    }
+    .choose_spin_tablet {
+        /* padding: 8px; */
+        margin: -15px auto -7px auto;
+        /* width: 70%; */
+        height: 30px;
+    }
+    .choose_spin_tablet select {
+        padding: 8px 0px;
+    }
+    .header-title img {
+        /* width: 30px; */
+    }
+    .get-free-spin p {
+        margin-left: 5px;
+    }
+    .text-col2 p {
+        font-size: 12px;
+    }
+    .text-col2 a {
+        margin-left: 10px;
+    }
+    .buy-turn-tablet .buy-turn {
+        /* margin-left: 75px; */
+        /* margin-top: 20px; */
+        padding-top: 0px;
+        padding-bottom: 2px;
+        height: 30px;
+    }
+    .buy-turn-tablet .buy-turn .buy_luot {
+        font-size: 9px;
+        line-height: initial;
+    }
+    .text-spin p {
+        font-size: 6px;
+        line-height: 10px;
+    }
+    .text-spin h1 {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none {
+        width: 103px;
+        height: 32px;
+        padding: 3px;
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    .text-spin .spin-btn a {
+        font-size: 15px;
+        line-height: 25px;
+        padding: 9px;
+    }
+    .check-box input {
+        width: 10px;
+        height: 10px;
+    }
+    .check-box span {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .text-spin {
+        bottom: 8px;
+        left: 32%;
+    }
+    .box-gift {
+        padding: 0 3px;
+    }
+    .box-gift-items img {
+        /* width: 30px; */
+    }
+    .gift-item-special img {
+        width: 40px;
+    }
+    span.close_page {
+        width: 91px;
+        padding: 0px 0px;
+        font-size: 12px;
+    }
+    .title_box_container {
+        padding-top: 10px
+    }
+    .rotation_box {
+        margin-top: 10px
+    }
+    .text-spin .spin-btn,
+    .spin_btn_none,
+    span.span_count_play {
+        width: 100px;
+        min-width: unset;
+    }
+
+    .title_buy_spin {
+        margin-bottom: 20px;
+    }
+
+    .close_buy_spin {
+        width: 35px;
+        top: -10px;
+    }
+
+    .buy_spin_container {
+        padding: 35px 27px;
+    }
+
+    .box_buy_spin .left_box img {
+        width: 70px;
+    }
+
+    .box_buy_spin .left_box span {
+        font-size: 7px;
+    }
+
+    .buy_spin_btn {
+        margin-top: 10px;
+    }
+
+    .div_select {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .buy_by_vnd,
+    .buy_by_zen {
+        padding: 5px 3px;
+    }
+
+    .box_buy_spin .right_box select,
+    .buy_spin_btn p {
+        padding: 5px;
+    }
+
+    .div_select .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: 10px;
+    }
+
+
+}

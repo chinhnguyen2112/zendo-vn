@@ -1,0 +1,1696 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif !important;
+}
+
+html {
+    color: #fff;
+}
+
+.col-half {
+    width: 50%;
+}
+
+#main_ranking {
+    background: #1F2334;
+}
+
+.none {
+    display: none;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.op_06 {
+    opacity: 0.6s;
+}
+
+/* banner */
+
+.banner_ranking {
+    background-image: url(/images/sanacc/cayrank/banner-ranking.png);
+    background-size: 100% 100%;
+    padding-top: 50px;
+    padding-bottom: 92px;
+}
+
+
+.text_banner_ranking {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.text_banner_ranking img {
+    width: 472px;
+    height: 170px;
+    margin-bottom: 30px;
+}
+
+.text_banner_ranking p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    padding: 0 255px;
+}
+
+.text_banner_ranking h3 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 46px;
+    margin-top: 30px;
+}
+
+/* content ranking */
+
+.content_ranking {
+    margin-top: 50px;
+    padding: 0 177px;
+}
+
+/* header */
+
+.header_content_ranking {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header_content_ranking h2 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 46px;
+}
+
+/* main content ranking */
+
+.main_content_ranking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_left {
+    width: calc(100% - 466px);
+}
+
+.row_ranking {
+    border: 3px solid #282C3D;
+    margin-bottom: 30px;
+}
+
+.row_ranking_container {
+    padding: 20px;
+}
+
+.title_row_ranking {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+.title_row_ranking .border_green {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #73B009;
+    text-align: center;
+    line-height: 35px;
+}
+
+.title_row_ranking span {
+    color: #73B009;
+}
+
+.box_choose_rank {
+    display: flex;
+}
+
+.choose_rank .row1 {
+    display: flex;
+}
+
+.box_choose_rank .rank-img {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.rank-img img {
+    width: 120px;
+    height: 120px;
+}
+
+.choose_rank {
+    width: 73%;
+}
+
+.choose_rank select {
+    width: 100%;
+}
+
+.row1 .col_ranking {
+    width: 50%;
+}
+
+.mr-40 {
+    margin-right: 40px;
+}
+
+.row2,
+.col_ranking {
+    display: flex;
+    flex-direction: column;
+}
+
+.col_ranking {
+    margin-bottom: 30px;
+}
+
+.row2 label,
+.col_ranking label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.row2 select,
+.col_ranking select {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 5px 0;
+    background: #1F2334;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+/* option */
+.option {
+    padding: 20px;
+}
+
+.option_input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.choose_date {
+    display: flex;
+}
+
+.option_input label,
+.choose_date label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.option_input input,
+.choose_date input {
+    color: #fff;
+    padding: 8px 10px;
+    background: #353847;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sao_ht label.error,
+.sao_mm label.error {
+    position: absolute;
+    bottom: -15px;
+    font-size: 13px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.option_ex {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 26px;
+}
+
+.option_ex p {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.option_ex span {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.option_ex input {
+    margin-right: 10px;
+    color-scheme: dark;
+}
+
+.option_ex span {
+    margin-right: 10px;
+}
+
+.option_ex .date_checkbox {
+    position: relative;
+}
+
+.date_checkbox label.error {
+    position: absolute;
+    right: 45%;
+    top: 0px;
+    font-size: 11px;
+}
+
+.enter_acc {
+    margin-bottom: 10px;
+}
+
+.info1 p {
+    font-style: italic;
+}
+
+.enter_acc p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.choose_champ input,
+.choose_booster input {
+    color: #fff;
+    padding: 8px 10px;
+    background: #353847;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.option_none {
+    display: none;
+}
+
+.name_booster_none {
+    display: none;
+}
+
+.name_booster_open {
+    display: block;
+}
+
+.enter_acc select,
+.enter_acc input {
+    color: #fff;
+    padding: 8px 10px;
+    background: #353847;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.info1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.info1 select {
+    width: 147px;
+    color: #fff;
+}
+
+.info2 {
+    display: flex;
+    width: calc(100% - 167px);
+}
+
+.col_info2 {
+    display: block;
+    width: 49%;
+    position: relative;
+}
+
+.col_info2 input {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.account_input label.error,
+.password_input label.error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 11px;
+}
+
+/* box right */
+
+.box_right {
+    width: 426px;
+}
+
+.box_right_container {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background: #282C3D;
+}
+
+.row1_box_right {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tit_row1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+.tit_row1 p {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #73B009;
+    text-align: center;
+    line-height: 35px;
+}
+
+.list_text_pay {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.list_text_pay span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    width: 109px;
+}
+
+.value_cores a,
+.list_text_pay p {
+    color: #73B009;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.value_cores {
+    display: flex;
+}
+
+.value_cores img {
+    margin: 0 10px;
+}
+
+.row2_box_right {
+    padding-top: 20px;
+}
+
+.row2_box_right p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.row2_box_right .row_check_box {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.row_check_box input {
+    margin-right: 10px;
+}
+
+.row2_box_right .row_check_box p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.row_check_box p span {
+    color: #73B009;
+}
+
+.price_notice .tong_tien,
+.price_notice .tong_tien .card_money,
+.price_notice .tong_tien .atm_money {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.price_notice .tong_tien span {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.row2_box_right .pay_btn {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #fff;
+    background: #73B009;
+    border-radius: 5px;
+    border: none;
+}
+
+.row2_box_right .pay_btn:hover {
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* popup voucher ranking */
+
+.popup_voucher_ranking {
+    position: fixed;
+    background: rgba(93, 93, 93, 0.77);
+    top: 0px;
+    padding-top: 130px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    z-index: 4;
+}
+
+.main_popup_voucher {
+    width: 500px;
+    margin: auto;
+    background: #212333;
+    color: #fbfbfb;
+    max-height: 80%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0px 24px 32px 8px rgb(0 0 0 / 5%);
+    flex-direction: column;
+}
+
+.title_popup_voucher {
+    background: #73b009;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    line-height: 30px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 700;
+}
+
+.body_voucher_ranking {
+    background: #212333;
+    max-height: 88%;
+    padding: 10px 10px 8px 20px;
+    overflow: auto;
+}
+
+.box_voucher_ranking {
+    
+}
+
+.voucher_nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+.voucher_nav input {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.voucher_nav p {
+    font-size: 18px;
+    line-height: 36px;
+    text-align: justify;
+}
+
+.voucher_ranking_btn {
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex: 0 15%;
+    padding: 20px 50px;
+    font-size: 20px;
+    color: #fff;
+    justify-content: space-around;
+}
+
+.close_voucher_popup,
+.add_voucher_popup {
+    background: #73b009;
+    padding: 8px 14px;
+    width: 40%;
+    max-width: 150px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add_voucher_popup {
+    background: #e67300 !important;
+}
+
+.voucher_ranking_none {
+    display: none;
+}
+
+.voucher_ranking_open {
+    display: block;
+}
+
+
+
+
+/* commitment */
+
+.commit {
+    padding: 0 177px;
+    margin-top: 50px;
+}
+
+.commit_container .content_commit {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.commit_cate {
+    flex: 1;
+    text-align: center;
+}
+
+/* result example */
+
+.result_ex {
+    padding: 0 177px;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.result_ex h2 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 46px;
+    margin-bottom: 40px;
+}
+
+.result_ex p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.list_img_result {
+    overflow: auto;
+}
+
+.result_img img {
+    width: 227px;
+}
+
+.active_select_1 {
+    display: block;
+}
+
+.active_select_2 {
+    display: block;
+}
+
+.option_active {
+    display: flex;
+}
+
+.ui-widget-content {
+    background: #353847 !important;
+    color: #fff !important;
+    border: none !important;
+    overflow: auto;
+    max-height: 250px !important;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    border-bottom: 1px solid #282C3D;
+}
+
+.error {
+    color: red;
+}
+
+/* css modal confirm */
+.modal_confirm {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(40 38 38 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.modal_confirm_container {
+    width: 650px;
+    height: 77%;
+    
+}
+
+.modal_confirm_box {
+    padding: 20px 24px 24px 24px;
+    background: #282C3D;
+    height: 100%;
+    box-shadow: 0px 0px 16px rgb(0 0 0 / 90%);
+    border-radius: 16px;
+    margin: auto;
+
+}
+
+.modal_header {
+    display: flex;
+    margin-bottom: 36px;
+}
+
+.modal_header .back_button {
+    width: 7%;
+    padding: 7px 3px 10px 15px;
+    background: #353847;
+    border-radius: 50%;
+}
+
+.modal_header .back_button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.back_button img {
+    height: 20px;
+}
+
+.modal_header h2 {
+    width: 90%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.modal_main {
+    overflow: auto;
+    height: 48%;
+}
+
+.modal_body {
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.header_table_modal {
+    padding: 0 40px;
+    background: #353847;
+    height: 53px;
+}
+
+.header_table_modal th {
+    color: #73B009;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    vertical-align: middle;
+    padding: 0 20px;
+}
+
+.header_table_modal .item1 {
+    width: 400px;
+}
+
+.header_table_modal .item2,
+.header_table_modal .item3 {
+    width: 28%;
+}
+
+
+
+.text_center {
+    text-align: center;
+}
+
+.body_table_modal td {
+    height: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+
+
+.modal_submit .price_notice {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.modal_submit_btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal_submit_btn .submit_data_btn {
+    color: #1F2334;
+    padding: 10px;
+    border-radius: 5px;
+    background: #8AC02C;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.none_modal {
+    display: none;
+}
+
+.open_modal {
+    display: flex;
+}
+
+.modal_submit_btn .submit_data_btn:hover,
+.modal_submit_btn .cancel_btn:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.none_tick {
+    display: none;
+}
+
+.modal_submit .method_pay {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.modal_submit .method_pay img {
+    padding-right: 20px;;
+}
+
+/* popup booster */
+.popup_booster {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(40 38 38 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_booster_box {
+    width: 950px;
+    height: 80%;
+    padding: 40px 24px 24px 24px;
+    background: #282C3D;
+    box-shadow: 0px 0px 16px rgb(0 0 0 / 90%);
+    border-radius: 16px;
+    margin: auto;
+    
+}
+
+.popup_booster_box .modal_header .back_button {
+    width: 5%;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+
+
+.popup_booster_main {
+    overflow-y: auto;
+    margin-top: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);;
+}
+
+.popup_booster_body {
+    height: 300px;
+    width: 99%;
+}
+
+.header_table_booster {
+    height: 53px;
+    color: #73B009;
+    background: #353847;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 1px;
+}
+
+.header_table_booster th {
+    vertical-align: middle;
+}
+
+.header_table_booster .id_col {
+    width: 78px;
+}
+
+.header_table_booster .ava_col {
+    width: 140px;
+}
+
+.shared_col {
+    width: 228px;
+    padding-left: 16px;
+}
+
+.body_table_booster {
+    height: 132px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.body_table_booster:hover {
+    cursor: pointer;
+}
+
+.body_table_booster td {
+    vertical-align: middle;
+}
+
+.body_table_booster .booster_free img {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.border_click {
+    border: 2px solid #8AC02C;
+}
+
+.id_none,
+.icon_check_none {
+    display: none;
+}
+
+.id_open {
+    display: block;
+}
+
+.icon_check_open {
+    display: initial;
+}
+
+.choose_booster_name {
+    margin-top: 30px;
+    padding: 10px;
+    background: #8AC02C;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.choose_booster_name span {
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.choose_booster_name:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.booster_none {
+    display: none;
+}
+
+.booster_open {
+    display: flex;
+}
+
+.popup_booster_mobile {
+    display: none;
+}
+
+.info_booster_none {
+    display: none;
+}
+
+/* responsive */
+
+/* laptop */
+@media only screen and (max-width: 1440px) {
+    .result_img {
+        width: max-content;
+    }
+
+    .modal_main {
+        height: 55%;
+    }
+
+    .popup_booster_box {
+        height: 63%;
+    }
+}
+
+
+@media only screen and (max-width: 1350px) {
+
+    .content_ranking,
+    .commit,
+    .result_ex {
+        padding: 0 100px;
+    }
+
+    .main_content_ranking {
+        display: block;
+    }
+
+    .box_left {
+        width: 100%;
+    }
+
+    .box_right {
+        width: 100%;
+    }
+
+    .result_ex {
+        padding-bottom: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .content_ranking,
+    .commit,
+    .result_ex {
+        padding: 0 66px;
+    }
+
+    .text_banner_ranking p {
+        padding: 0 84px;
+    }
+
+    .result_ex {
+        padding-bottom: 30px;
+    }
+
+    .date_checkbox label.error {
+        right: 65%;
+    }
+
+    .modal_header .back_button {
+        width: 7%;
+    }
+
+    .modal_confirm_container {
+        width: 650px;
+        height: 80%;
+        /* overflow: auto; */
+    }
+
+    .popup_booster_box {
+        width: 800px;
+        height: 79%;
+    }
+
+    .popup_booster_body,
+    .popup_booster_mobile {
+        height: 250px;
+    }
+
+}
+
+/* tablet */
+
+@media only screen and (max-width: 920px) {
+    .popup_booster {
+        height: 47%;
+    }
+
+    .popup_booster_box {
+        height: 79%;
+    }
+}
+
+@media only screen and (max-width: 825px) {
+    .modal_confirm_box {
+        height: 80%;
+    }
+
+    .popup_booster {
+        height: 56%;
+    }
+
+    .popup_booster_box .modal_header .back_button {
+        width: 7%;
+    }
+
+    .modal_header h2 {
+        font-size: 20px;
+    }
+
+    .body_table_booster {
+        font-size: 13px;
+    }
+
+    .popup_booster_box {
+        width: 650px;
+        height: 70%;
+    }
+
+    .popup_booster_body,
+    .popup_booster_mobile {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .content_ranking,
+    .commit,
+    .result_ex {
+        padding: 0 50px;
+    }
+
+    .text_banner_ranking img {
+        width: 328px;
+        height: 120px;
+    }
+
+    .text_banner_ranking p {
+        padding: 0 56px;
+    }
+
+    .result_ex {
+        padding-bottom: 30px;
+    }
+
+    .date_checkbox label.error {
+        right: 53%;
+    }
+
+    .text_banner_ranking p {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .text_banner_ranking h3 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .content_commit {
+        flex-wrap: wrap;
+    }
+
+    .commit_cate {
+        width: 320px;
+        flex: none;
+        margin-bottom: 30px;
+    }
+
+    .modal_header .back_button {
+        width: 8%;
+    }
+
+    .header_table_modal th {
+        font-size: 13px;
+    }
+
+    .modal_confirm_container {
+        width: 600px;
+    }
+
+    .modal_confirm_box {
+        width: 90%;
+    }
+
+    .popup_booster {
+        height: 100%;
+    }
+
+    .header_table_booster {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+
+    .commit_container .content_commit {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .enter_acc {
+        display: block;
+    }
+
+    .info1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .info1 select {
+        width: 100%;
+    }
+
+    .info2 {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+    .popup_booster_box {
+        width: 100%;
+        height: 65%;
+        width: 400px;
+    }
+
+    .popup_booster_box .modal_header .back_button,
+    .out_info_booster {
+        width: 11%;
+        padding: 5px 0px 6px 13px;
+    }
+
+    .popup_booster_box .modal_header .back_button img,
+    .out_info_booster img {
+        height: 12px;
+    }
+
+    .out_info_booster {
+        padding: 5px 3px 8px 13px;
+        background: #353847;
+        border-radius: 50%;
+    }
+    
+    .out_info_booster:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    .popup_booster .modal_header h2 {
+        font-size: 17px;
+    }
+
+    .header_table_booster {
+        font-size: 14px;
+    }
+
+    .popup_booster_body,
+    .popup_booster_mobile {
+        width: 100%;
+    }
+
+    .body_popup_none {
+        display:  none;
+    }
+
+    .popup_booster_mobile {
+        display: block;
+    }
+
+    .popup_booster_box {
+        width: 330px;
+        padding: 40px 12px 24px 12px;
+    }
+
+    .popup_booster_mobile table {
+        width: 100%;
+    }
+
+    .popup_booster_mobile .body_table_booster {
+        height: 52px;
+    }
+
+    .shared_col span {
+        margin-right: 15px;
+    }
+
+    .info_booster_popup {
+        z-index: 9999;
+    }
+
+    .info_booster_body {
+        text-align: center;
+    }
+
+    .info_booster_body .ava_booster {
+        margin-top: 20px;
+        margin-bottom: 26px;
+    }
+
+    .info_booster_body p {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .info_status_booster {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 23px;
+        justify-content: center;
+    }
+
+    .info_status_booster img {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .info_booster_body .booster_free img {
+        padding-right: 14px;
+    }
+
+    .info_booster_body .booster_free span {
+        color: #73B009;
+    }
+
+    .green_text {
+        font-weight: 700 !important; 
+        font-size: 14px !important;
+        line-height: 18px !important;
+        color: #73B009;
+    }
+
+    .mt16 {
+        margin-top: 16px;
+    }
+
+    .info_booster_body .shared_col {
+        margin-top: 16px;
+        width: auto;
+        padding-left: 0;
+    }
+
+    .info_booster_open  {
+        display: flex;
+    }
+
+    .table_booster_mobile {
+        height: 52px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .table_booster_mobile td {
+        vertical-align: middle;
+    }
+
+    .main_popup_voucher {
+        width: 350px;
+    }
+
+    .box_voucher_ranking {
+        height: 250px;
+    }
+
+    .voucher_nav p {
+        font-size: 12px;
+    }
+
+    .close_voucher_popup, .add_voucher_popup {
+        font-size: 12px;
+    }
+
+}
+
+
+@media only screen and (max-width: 520px) {
+
+    .content_ranking,
+    .commit,
+    .result_ex {
+        padding: 0 25px;
+    }
+
+    .result_ex {
+        padding-bottom: 30px;
+    }
+
+
+    .text_banner_ranking img {
+        width: 266px;
+        height: 105px;
+        margin-bottom: 20px;
+    }
+
+    .text_banner_ranking p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .text_banner_ranking h3 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .choose_rank {
+        width: 100%;
+    }
+
+    .box_choose_rank {
+        display: block;
+    }
+
+    .box_choose_rank .rank-img {
+        display: block;
+        margin: auto;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .commit_cate p {
+        padding: 0 20px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .option_input {
+        display: block;
+    }
+
+    .main_text {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .option_active {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+
+    .banner_ranking {
+        background-image: url(/images/sanacc/cayrank/banner-ranking-mini.png);
+    }
+
+    .text_banner_ranking {
+        padding: 0;
+    }
+
+    .text_banner_ranking p {
+        padding: 0 35px;
+    }
+
+    .info2 {
+        display: block;
+    }
+
+    .col_info2 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header_content_ranking h2 {
+        font-size: 32px;
+    }
+
+    .date_checkbox label.error {
+        right: 13%;
+    }
+    
+
+    .enter_acc p,
+    .option_ex span,
+    .info1 select,
+    .option_input label, .choose_date label,
+    .row2 select, .col_ranking select,
+    .col_info2 input,
+    .choose_champ input, .choose_booster input {
+        font-size: 12px;
+    }
+
+    .commit_cate {
+        width: 180px;
+    }
+
+    .commit_cate img {
+        width: 65%;
+    }
+
+    .result_ex {
+        margin-top: 50px;
+    }
+
+    .result_ex h2 {
+        font-size: 28px;
+    }
+
+    .modal_confirm_container {
+        overflow: auto;
+        width: 100%
+    }
+
+    .modal_confirm_box {
+        height: 90%;
+    }
+
+    .modal_main {
+        height: 50%;
+    }
+
+    .modal_body {
+        width: 800px;
+    }
+
+    .modal_header .back_button,
+    .out_info_booster,
+    .out_info_booster {
+        width: 13%;
+    }
+
+    .modal_header h2 {
+        font-size: 20px;
+    }
+
+    .header_table_modal th,
+    .body_table_modal td {
+        height: 40px;
+        font-size: 13px;
+
+    }
+
+    .popup_booster {
+        height: 75%;
+    }
+
+    .popup_booster_box {
+        width: 300px;
+        height: 75%;
+    }
+
+    .popup_booster_box .modal_header .back_button,
+    .out_info_booster,
+    .out_info_booster {
+        width: 11%;
+        padding: 6px 0px 8px 14px;
+    }
+
+    .box_voucher_ranking {
+        height: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 394px) {
+    .commit_cate {
+        width: 160px;
+    }
+
+}
+
+
+@media only screen and (max-width: 376px) {
+
+    .text_banner_ranking img {
+        width: 206px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .text_banner_ranking p {
+        padding: 0 25px;
+    }
+
+    .header_content_ranking h2 {
+        font-size: 27px;
+        line-height: 26px;
+    }
+
+    .header_content_ranking img {
+        width: 100%;
+    }
+
+    .option_ex span {
+        font-size: 14px;
+        line-height: 21px;
+        margin-right: 0;
+    }
+
+    .option_checkbox input {
+        margin-right: 0;
+    }
+
+    .date_checkbox label.error {
+        right: 8%;
+    }
+
+    .commit_cate {
+        width: 155px;
+    }
+
+    .modal_header {
+        margin-bottom: 20px;
+    }
+
+    .modal_main {
+        height: 45%;
+    }
+
+    .popup_booster {
+        height: 97%;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    .value_cores img {
+        margin-left: 0px;
+    }
+
+    .result_ex h2 {
+        font-size: 28px;
+    }
+
+    .modal_main {
+        height: 40%;
+    }
+
+    .popup_booster_box .modal_header .back_button, .out_info_booster, .out_info_booster {
+        width: 12%;
+    }
+
+    .content_ranking, .commit, .result_ex {
+        padding: 15px;
+    }
+
+    .list_text_pay span {
+        font-size: 12px;
+    }
+
+    .value_cores a, .list_text_pay p {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 321px) {
+    
+    .modal_confirm_box {
+        padding: 20px 16px 16px 16px;
+    }
+    
+    .date_checkbox label.error {
+        right: -6%;
+        font-size: 10px;
+    }
+
+    .header_content_ranking h2 {
+        font-size: 22px;
+    }
+
+    .commit_cate {
+        width: 130px;
+    }
+
+    .result_ex h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .modal_submit .method_pay img {
+        padding-right: 13px;
+    }
+
+    .modal_header .back_button {
+        width: 17%;
+    }
+
+    .main_popup_voucher {
+        width: 280px;
+    }
+
+    .voucher_nav p {
+        font-size: 9px;
+    }
+
+    .voucher_ranking_btn {
+        padding: 20px 20px;
+    }
+}

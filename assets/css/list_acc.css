@@ -1,0 +1,103 @@
+span.ms {
+    position: absolute;
+    padding: 2px 7px;
+    background-color: #a94442;
+    top: 0px;
+    right: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+li.li_ac {
+    float: unset !important;
+    font-size: 12px !important;
+    font-weight: unset !important;
+    border: 0px !important;
+    margin-bottom: 0px !important;
+    /* padding-left: 10px; */
+    margin-right: 0px !important;
+    list-style-type: square;
+    width: unset !important;
+}
+.all .content .list_account ul li .account_info {
+    padding-left: 19px;
+    padding-top: 16px;
+    padding-bottom: 11px;
+    line-height: 23px;
+}
+span.c_price {
+    /* border: 1px solid #32c5d2; */
+    /* border-top-width: 0px; */
+    /* border-bottom-width: 0px; */
+    padding: 10px 15px;
+    width: 50%;
+    color: #fff;
+    background: #ff4642;
+    /* border-radius: 8px; */
+    text-align: center;
+}
+span.link_ct {
+    width: 50%;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    text-align: center;
+    background: #cd9a34;
+    padding: 10px;
+    color: #fff;
+    /* border-radius: 8px; */
+}
+.dpl_flex {
+    display: flex;
+    /* margin-top: 3px; */
+    bottom: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    /* justify-content: space-between; */
+}
+.account_image .img_acc_c, .account_image img {
+    width: 216px;
+    height: 171px;
+}
+.flip-container .account_info{
+    width: auto;
+    float: unset;
+    margin-top:0px;
+}
+ul.ul_grid {
+    display: grid;
+    grid-template-columns: calc((100% - 90px) / 4) calc((100% - 90px) / 4) calc((100% - 90px) / 4) calc((100% - 90px) / 4);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+ul.ul_grid li {
+     margin-bottom: 0px !important;
+     margin-right: 0px !important;
+     border: 1px solid #30343c;
+     width: unset !important;
+     margin:0px  !important;
+}
+.phone_account_list{
+    border: 1px solid #fcd053;
+    position: relative;
+    height: 337px;
+    background: #1f2228;
+}
+@media (max-width: 1024px){
+    ul.ul_grid {
+        grid-template-columns: calc((100% - 60px) / 3) calc((100% - 60px) / 3) calc((100% - 60px) / 3) ;
+    }
+}
+@media (max-width: 540px){
+    ul.ul_grid {
+        grid-template-columns: 100%;
+    }
+    .dpl_flex {
+    bottom: 0px;
+}
+}
+@media (max-width: 420px){
+    ul.ul_grid {
+        grid-template-columns: 100% ;
+    }
+}
