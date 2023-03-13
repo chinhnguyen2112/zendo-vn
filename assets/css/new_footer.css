@@ -1,0 +1,253 @@
+.dis-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.just-cont-center {
+    justify-content: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.font-dam {
+    font-weight: bold;
+}
+
+.images_w100 img {
+    width: 100%;
+}
+
+.font_size32 {
+    font-size: 22px;
+}
+
+.line-hei48 {
+    line-height: 48px;
+}
+
+.font_clor_w {
+    color: #fff;
+}
+
+.commom-row {
+    padding-bottom: 30px;
+}
+
+.font_clor_brown {
+    color: #89909e;
+}
+
+.font_clor_brown_im {
+    color: #89909e !important;
+}
+
+.font_12 {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.font_18 p,
+.font_18 span {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.font_size22 {
+    font-size: 22px !important;
+    line-height: 32px !important;
+}
+
+.font_size20 {
+    font-size: 20px !important;
+    line-height: 24px !important;
+}
+
+.list_vqmm_edit {
+    gap: 21px !important;
+}
+
+.address_cty_edit {
+    align-items: start !important;
+}
+
+.mg-bt16 {
+    margin-bottom: 16px;
+}
+
+.z_footer {
+    background: #1f2334;
+    padding-bottom: 5px;
+}
+.z_maxwith {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content_footer {
+    padding: 20px 10px 0 10px;
+}
+.content_ft_1_edit {
+    width: 35% !important;
+}
+
+.images_w100 img {
+    width: 100%;
+}
+.left-foot-cont {
+    width: 60%;
+    margin-top: 10px;
+}
+
+.join-zendo-cont {
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.join-zendo a {
+    margin-right: 15px;
+}
+
+.mobile-cont-right {
+    display: none;
+}
+.ul-ft-tutorial li,
+.ul-ft-introduce li {
+    margin: 10px 6px;
+}
+.ul-ft-introduce,
+.ul-ft-tutorial {
+    display: none;
+}
+.fb-hide-mb {
+    display: none;
+    padding: 6px;
+}
+.content_ft_cont p:hover {
+    color: #fff !important;
+}
+.content_ft_cont {
+    justify-content: space-between;
+}
+.ft_bot_edit {
+    margin-top: unset !important;
+}
+.ft_bot_edit {
+    display: block ;
+    background: rgba(21, 23, 24, 1) !important;
+    margin-right: unset !important;
+    margin-left: unset !important;
+}
+.z_maxwith_2 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cp_cont {
+    justify-content: space-between;
+}
+.box_vxmm_main {
+    right: unset;
+    left: 25px;
+    bottom: 10px;
+    width: auto;
+    cursor: pointer;
+    background: none;
+}
+.box_vxmm_main img {
+    width: 100px;
+}
+.lh_mess + .lh_call {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .content_ft_1 {
+        flex-direction: column;
+    }
+    .call_email p,
+    .text_diachi p,
+    .email_ft p,
+    .mobile-cont-right p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .mobile-cont-right {
+        display: block;
+    }
+    .mb_contact {
+        margin: 24px;
+        position: relative;
+    }
+    .mb_contact img {
+        position: absolute;
+        right: 0;
+        top: 11px;
+    }
+    .content_ft_cont {
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .content_footer {
+        flex-wrap: wrap;
+    }
+} 
+
+@media (max-width: 768px) {
+    .container_box_1 {
+        margin-left: 0px;
+    }
+    .title_footer_1 .font_size22 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .span_name_cty {
+        display: block;
+        text-align: center;
+    }
+    .left-foot-cont {
+        width: 50%;
+    }
+    .join-zendo .mb-change-size img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content_ft_1,
+    .left-foot-cont {
+        width: 100% !important;
+    }
+    .join-zendo-cont {
+        justify-content: center;
+    }
+    .join-zendo a {
+        margin-right: 18px;
+    }
+    .join-zendo {
+        width: 100%;
+        text-align: center;
+    }
+    .mb-change-size {
+        padding-bottom: 3px;
+        border-bottom: 1px solid #21242a;
+        display: flex;
+        justify-content: center;
+    }
+    .mobile-cont-right {
+        margin-top: 0px;
+        text-align: left;
+    }
+    .mb_contact {
+        margin: 24px 0;
+    }
+    .cp_cont {
+        flex-direction: column-reverse;
+    }
+    .box_vxmm_main {
+        bottom: 80px;
+    }
+}

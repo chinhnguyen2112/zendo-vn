@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_125_181)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41998 32L9.83097 39.3788L27.7031 53.6847L59.8729 59.407L60.025 54.0612L51.3551 32L60.025 9.93881L59.8729 4.59293L27.7031 10.3906L9.83097 24.6212L5.41998 32Z" fill="#2FC6F9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.3551 32L55.7661 32L63.9797 54.0612L60.025 54.0612L51.3551 32Z" fill="#185B70"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.8729 59.4071L63.9797 64L63.9797 54.0612L60.025 54.0612L59.8729 59.4071Z" fill="#265E71"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.8729 59.4071L63.9797 64L25.4976 56.9976L27.7031 53.6847L59.8729 59.4071Z" fill="#4385A1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7031 53.6847L25.4976 56.9976L7.24522 42.24L9.83097 39.3788L27.7031 53.6847Z" fill="#35779C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.83097 39.3788L7.24522 42.24L0.0203243 32L5.41998 32L9.83097 39.3788Z" fill="#429BD4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98308 32L13.0251 27.1812L28.6918 14.6824L54.169 10.0894L46.716 32L54.169 53.9106L28.6918 49.3176L13.0251 36.8941L9.98308 32Z" fill="url(#paint0_linear_125_181)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.3551 32L55.7661 32L63.9797 9.93883L60.025 9.93883L51.3551 32Z" fill="#31608E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.8729 4.59296L63.9797 1.8894e-05L63.9797 9.93884L60.025 9.93884L59.8729 4.59296Z" fill="#2E608F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.8729 4.59291L63.9797 -2.8385e-05L25.4976 7.07762L27.7031 10.3906L59.8729 4.59291Z" fill="#4C95BC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7031 10.3906L25.4976 7.07762L7.24522 21.8353L9.83097 24.6212L27.7031 10.3906Z" fill="#6392CF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.83097 24.6212L7.24522 21.8353L0.0203247 32L5.41998 32L9.83097 24.6212Z" fill="#ACE9EC"/>
+<path d="M38.8827 32C38.8827 28.299 35.8523 25.2988 32.1141 25.2988C28.3759 25.2988 25.3455 28.299 25.3455 32C25.3455 35.701 28.3759 38.7012 32.1141 38.7012C35.8523 38.7012 38.8827 35.701 38.8827 32Z" fill="url(#paint1_linear_125_181)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_125_181" x1="32.5704" y1="23.7929" x2="47.5525" y2="23.7929" gradientUnits="userSpaceOnUse">
+<stop stop-color="#274270"/>
+<stop offset="0.701961" stop-color="#203A66"/>
+<stop offset="1" stop-color="#18315B"/>
+</linearGradient>
+<linearGradient id="paint1_linear_125_181" x1="34.928" y1="32.2259" x2="25.3455" y2="32.2259" gradientUnits="userSpaceOnUse">
+<stop stop-color="#88E6FD"/>
+<stop offset="1" stop-color="#ACE9EC"/>
+</linearGradient>
+<clipPath id="clip0_125_181">
+<rect width="64" height="64" fill="white" transform="translate(0 64) rotate(-90)"/>
+</clipPath>
+</defs>
+</svg>

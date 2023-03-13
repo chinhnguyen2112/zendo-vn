@@ -1,0 +1,57 @@
+.zendo_price {
+    display: flex;
+    justify-content: center;
+}
+.zendo_price .right_detail_li_first {
+    border-right:  unset !important;
+}
+.row_detail_last {
+    flex-direction: column;
+}
+.last_price_zend {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+}
+.last_price_new {
+    border-right: 2px solid #4c4f5d;
+    padding-right: 10px;
+}
+.pay_cart_btn_zend {
+    width: 322px;
+    height: 46px;
+    background: #73B009;
+    box-shadow: 0px 0px 15px rgb(247 151 34 / 10%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.pay_cart_btn_zend span {
+    /*color: #1F2334;*/
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width: 1024px){
+   .pay_cart_btn_zend {
+    width: 100%;
+   }  
+}
+.pay_cart_btn span{
+    color : #fff !important;
+}
+.last_price_cont {
+    text-align: center;
+    padding-right: 10px;
+}
+.last_price_cont span {
+    font-size: 21px !important;
+}
+.gh_dash {
+    border-bottom: 1px dashed #4C4F5D;
+}
+span.last_price_zend {
+    padding-left: 8px;
+}

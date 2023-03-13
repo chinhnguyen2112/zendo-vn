@@ -1,0 +1,13 @@
+.box_text_shop ul{
+    display: flex;
+    flex-direction: column;
+}
+.box_text_shop li {
+    border: none !IMPORTANT;
+}
+.box_text_shop {
+    padding-top: 16px;
+    padding-bottom: 11px;
+    line-height: 23px;
+    padding-left: 21px;
+}

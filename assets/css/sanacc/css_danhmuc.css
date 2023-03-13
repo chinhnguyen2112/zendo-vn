@@ -1,0 +1,561 @@
+.box_header {
+    /* background: #1F2334; */
+    /* box-shadow: 0px 5px 4px rgb(0 0 0 / 50%); */
+}
+
+.danhmuc {
+    background: #1F2334;
+    padding: 20px 177px;
+    /* margin-top: -65px; */
+}
+
+.img_bn_danhmuc {
+    width: 100%;
+    /* margin: 0px -177px; */
+    /* display: none; */
+}
+
+.img_bn_danhmuc img {
+    width: 100%;
+}
+
+.breadcrump {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+span.pre_danhmuc {
+    margin: 0px 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #4C4F5D;
+}
+
+span.text_bread {
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #4C4F5D;
+}
+
+.vq_danhmuc {
+    margin-top: 26px;
+    position: relative;
+    margin: 0px -177px;
+    height: 954px;
+    background: linear-gradient(360deg, #1F2334 3.92%, rgba(31, 35, 52, 0) 19.31%), linear-gradient(180deg, #1F2334 2.15%, rgba(0, 0, 0, 0) 20.54%), url(/images/sanacc/danhmuc/nen.gif);
+    background-size: 100%;
+    background-position: center;
+}
+
+p.title_vq_danhmuc {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.content_vq_danhmuc {
+    background: url(/images/sanacc/danhmuc/nen.gif);
+    margin: 0px -177px;
+    background-size: 100% 100%;
+    padding: 0px 177px;
+}
+
+.ct_danhmuc_right {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list_danhmuc {
+    margin-top: 35px;
+}
+
+p.title_list {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.content_list_danhmuc {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px 35px;
+    margin-top: 18px;
+}
+
+.box__list_danhmuc img {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    height: auto;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
+
+.box__list_danhmuc {
+    /* border: 1px solid #ddc435; */
+    border-radius: 10px;
+    background: url(/images/sanacc/danhmuc/nen_list.png);
+    cursor: pointer;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.25));
+    background-size: 100% 100%;
+}
+
+.box_detail_danhmuc {
+    padding: 0px 10px;
+    margin-top: 15px;
+}
+
+p.\.count_acc {}
+
+p.count_acc {
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+span.num_count {
+    font-weight: 600;
+}
+
+.box_detail_danhmuc ul {
+    padding: 0px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.box_detail_danhmuc li {
+    margin-top: 10px;
+}
+
+.box_price_danhmuc {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.box_price_danhmuc img {
+    width: 60px;
+    height: auto;
+    padding: unset;
+    border-radius: 0px;
+    filter: none;
+}
+
+.box_price_danhmuc span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+span.btn_buy {
+    background: linear-gradient(95.83deg, #8AC02C 0.93%, #398100 104.08%);
+    box-shadow: 0px 4px 5px rgb(31 35 52 / 50%);
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-style: normal;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.box__list_danhmuc p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.img_pc_left {
+    /* background: url(/images/sanacc/img_nen_dm.png); */
+    position: relative;
+    width: 400px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    position: relative;
+    height: 400px;
+    /* margin-right: 180px; */
+}
+
+img.img_pc {
+    height: 400px;
+}
+
+.img_pc_left img {
+    border-radius: 30px;
+    /* margin: 25px 45px 32px 45px; */
+    width: -webkit-fill-available;
+    height: unset;
+}
+
+.img_pc_left p {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    display: none;
+    position: absolute;
+    font-size: 21px;
+    line-height: 39px;
+    /* identical to box height */
+    height: 100%;
+    top: 44%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+img.img_quay {
+    display: none;
+    position: absolute;
+    top: 32%;
+    width: 25%;
+    left: 37%;
+}
+
+.img_pc_left:hover .p_hover {
+    display: block;
+}
+
+.img_pc_left:hover {
+    opacity: .8;
+}
+
+.box_absolute {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 100px 115px 0px 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+img.img_dm_lq {
+    /* margin: 10% 0px; */
+}
+
+.box_nav_ab {
+    height: 85%;
+    width: 464px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+img.img_moc {
+    /* margin: 30px 0px; */
+}
+
+.box_nav_ab_2 {
+    width: 41%;
+    height: 89%;
+    padding-left: 80px;
+    justify-content: flex-end;
+}
+
+img.img_vp_1,
+.img_vp_2 {
+    width: fit-content;
+}
+
+.box_btn_ab {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px -54px;
+}
+
+span.span_tl {
+    border: 3px solid #BA4DDC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 27px;
+    background: #1F2334;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+span.span_ls {
+    border: 3px solid #843BEC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #1F2334;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 8px 27px;
+}
+
+.box_nav_ab_3 {
+    justify-content: space-evenly;
+    width: fit-content;
+}
+
+.div_img_vp_1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.div_img_vp_2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box_img_ab_2 {
+    display: none;
+}
+
+img.img_dm_lq {
+    width: 333px;
+}
+
+a.a_link_vqlq {
+    position: absolute;
+    top: 26%;
+    right: 28%;
+    width: 25%;
+    height: 50%;
+    z-index: 2;
+}
+
+/* @media only screen and (min-width: 1540px) {
+    .list_danhmuc {
+        padding: 0px 100px;
+    }
+} */
+
+@media only screen and (max-width: 1520px) {
+    .box_nav_ab_2 {
+        padding-left: 0px;
+    }
+    .vq_danhmuc {
+        height: 680px;
+    }
+    a.a_link_vqlq {
+        position: absolute;
+        top: 28%;
+        right: 28%;
+        width: 25%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 1519px) {
+    .content_list_danhmuc {
+        grid-template-columns: auto auto auto;
+    }
+    .vq_danhmuc {
+        height: 640px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .danhmuc {
+        padding: 20px 75px;
+    }
+    .box_detail_danhmuc {
+        margin-top: -10px;
+    }
+    .content_vq_danhmuc {
+        margin: 0px -75px;
+    }
+    .content_vq_danhmuc {
+        padding: 0px 75px;
+    }
+    .vq_danhmuc {
+        margin: 0px -75px;
+        height: 600px;
+    }
+    .box_nav_ab_2 {
+        margin-right: 39px;
+    }
+    .box_absolute {
+        padding: 75px 75px 0px 75px;
+    }
+    img.img_dm_lq {
+        width: 318px;
+    }
+    a.a_link_vqlq {
+        position: absolute;
+        top: 25%;
+        right: 28%;
+        width: 25%;
+        height: 50%;
+    }
+    .content_list_danhmuc {
+        grid-template-columns: auto auto auto;
+    }
+    /*.ct_danhmuc_right img {*/
+    /*    width: 100%;*/
+    /*}*/
+}
+
+.img_mb {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .vq_danhmuc {
+        height: 475px;
+    }
+    .list_danhmuc {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .danhmuc {
+        padding: 20px 50px;
+    }
+    .content_vq_danhmuc {
+        margin: 0px -50px;
+    }
+    .content_vq_danhmuc {
+        padding: 0px 50px;
+    }
+    .vq_danhmuc {
+        margin: 0px -50px;
+        height: 365px;
+    }
+    img.img_dm_lq {
+        width: 224px;
+    }
+    span.span_tl {}
+    span.span_tl,
+    span.span_ls {
+        line-height: 20px;
+        padding: 5px 10px;
+    }
+    img.img_moc {
+        width: 93px;
+    }
+    .box_nav_ab_1 {
+        width: 289px;
+    }
+    .box_nav_ab_2 {
+        width: 41%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .danhmuc {
+        padding: 20px 25px;
+    }
+    .content_vq_danhmuc {
+        margin: 0px -25px;
+    }
+    .content_vq_danhmuc {
+        padding: 0px 25px;
+    }
+    .vq_danhmuc {
+        margin: 0px -25px;
+        background: linear-gradient(360deg, #1F2334 3.92%, rgba(31, 35, 52, 0) 19.31%), linear-gradient(180deg, #1F2334 2.15%, rgba(0, 0, 0, 0) 20.54%), url(/images/sanacc/danhmuc/nen_mb.gif);
+        background-size: cover;
+        background-position-x: 65%;
+        height: 520px
+    }
+    .box_nav_ab_1 {
+        display: none;
+    }
+    .content_list_danhmuc {
+        grid-template-columns: auto;
+    }
+    .box__list_danhmuc {
+        margin: auto;
+        width: 100%;
+    }
+    .hide_mb {
+        display: none;
+    }
+    .img_pc_left {
+        margin-right: 0px;
+    }
+    .img_pc_left img {
+        /* margin: 14px 40px 20px 40px; */
+        /* width: -webkit-fill-available; */
+        /* height:unset; */
+    }
+    .img_pc_left {
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .img_pc_left p {
+        font-size: 22px;
+    }
+    p.title_vq_danhmuc {
+        margin-bottom: 30px;
+    }
+    .content_list_danhmuc {
+        margin-top: 17px;
+    }
+    .box_nav_ab_2 {
+        margin: 0px;
+        width: inherit;
+        height: auto;
+        margin-top: 16px;
+    }
+    .box_absolute {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .box_nav_ab_3 {
+        flex-direction: row;
+        height: auto;
+        /* padding-top: 25px; */
+    }
+    .list_danhmuc {
+        margin-top: 15px;
+    }
+    a.a_link_vqlq {
+        top: 37%;
+        width: 50%;
+    }
+    p.title_list {
+        font-size: 18px;
+    }
+}
