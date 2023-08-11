@@ -30,6 +30,7 @@ class Account extends CI_Model
             $this->db->where($where);
         }
         return $this->db->get('accounts')->row_array();
+        // echo $this->db->last_query();
     }
     public function check_register($where)
     {

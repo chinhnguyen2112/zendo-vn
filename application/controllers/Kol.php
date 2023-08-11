@@ -497,6 +497,64 @@ class Kol extends CI_Controller
         }
         echo json_encode($response);
     }
+    public function add_friend()
+    {
+        $id_friend = $this->input->post("id");
+        $type = $this->input->post("type");
+        $id = $_SESSION['user']['id'];
+        $friend =  $this->Account->query_sql_row("SELECT * FROM friend WHERE  (id_user = $id AND id_friend = $id_friend) OR ( id_user = $id_friend AND id_friend = $id) ");
+        if ($type == 'add') {
+            if ($friend == null) {
+                $data_insert = [
+                    'id_user' => $id,
+                    'id_friend' => $id_friend,
+                    'type' => 0,
+                    'created_at' => time(),
+                ];
+                $insert = $this->Account->insert($data_insert, 'friend');
+                if ($insert > 0) {
+                    $response = [
+                        'status' => 1,
+                        'mess' => "Thêm bạn bè thành công!"
+                    ];
+                } else {
+                    $response = [
+                        'status' => 0,
+                        'mess' => "Thất bại"
+                    ];
+                }
+            } else {
+                $response = [
+                    'status' => 2,
+                    'mess' => "đã tồn tại"
+                ];
+            }
+        } else {
+            if ($friend != null) {
+                $where_del = [
+                    'id' => $friend['id'],
+                ];
+                $insert = $this->Account->delete($where_del, 'friend');
+                if ($insert > 0) {
+                    $response = [
+                        'status' => 1,
+                        'mess' => "Đã xóa bạn bè"
+                    ];
+                } else {
+                    $response = [
+                        'status' => 0,
+                        'mess' => "Thất bại"
+                    ];
+                }
+            } else {
+                $response = [
+                    'status' => 2,
+                    'mess' => "đã tồn tại"
+                ];
+            }
+        }
+        echo json_encode($response);
+    }
 
     // public function list_kol()
 

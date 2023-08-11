@@ -58,3 +58,5 @@ $route['update_data_kol'] = 'Kol/update_data_kol';
 $route['search_kol'] = 'Home/search_kol';
 $route['thue_kol'] = 'Kol/thue_kol';
 $route['change_status_thue'] = 'Kol/change_status_thue';
+$route['show_more_friend'] = 'Home/show_more_friend';
+$route['add_friend'] = 'Kol/add_friend';

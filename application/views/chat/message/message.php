@@ -19,6 +19,7 @@ if (isset($_SESSION)) {
 	<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 	<link rel="stylesheet" href="/assets/css/chat/message/loading-bar.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link data-n-head="ssr" rel="icon" type="image/x-icon" href="<?= site_main() ?>images/fav.png">
 
 	<title>Messager</title>
 </head>
@@ -119,7 +120,7 @@ if (isset($_SESSION)) {
 			main = document.getElementById("main"),
 			phone,
 			addr, name_chat, type_user;
-		var id_chat = '<?= $this->input->get('kol') ?>';
+		var id_chat = '<?= $this->input->get('user') ?>';
 		if (Math.floor(id_chat) == id_chat && $.isNumeric(id_chat) && id_chat > 0 && id_chat != <?= $_SESSION['user']['id'] ?>) {
 			var data_chat = {
 				id: id_chat
@@ -143,6 +144,8 @@ if (isset($_SESSION)) {
 							image: bg_image
 						});
 
+					} else {
+						window.location.href = "/message";
 					}
 				},
 				error: function(xhr, status, error) {

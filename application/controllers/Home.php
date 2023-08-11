@@ -321,11 +321,13 @@ class Home extends CI_Controller
     {
         if (check_login()) {
             $id = $_SESSION['user']['id'];
-            $sql = "SELECT accounts.id,username,avatar,name FROM `accounts` JOIN friend ON friend.id_user = accounts.id OR friend.id_friend = accounts.id WHERE accounts.id != $id AND ( id_user = $id OR id_friend = $id ) GROUP by id";
+            $sql = "SELECT accounts.id,username,avatar,name,friend.type as type_fr FROM `accounts` JOIN friend ON friend.id_user = accounts.id OR friend.id_friend = accounts.id WHERE accounts.id != $id AND ( id_user = $id OR id_friend = $id ) GROUP by id  LIMIT 20";
             $data['my_friend'] = $this->Account->query_sql($sql);
-            $sql2 = "SELECT accounts.id,username,avatar,name FROM `accounts` WHERE id NOT IN   ( SELECT id_user FROM friend WHERE id_user = $id OR id_friend = $id ) AND  id NOT IN   ( SELECT id_friend FROM friend WHERE id_user = $id OR id_friend = $id )   ORDER BY `id` ASC";
+            $sql2 = "SELECT accounts.id,username,avatar,name FROM `accounts` WHERE id NOT IN   ( SELECT id_user FROM friend WHERE id_user = $id OR id_friend = $id ) AND  id NOT IN   ( SELECT id_friend FROM friend WHERE id_user = $id OR id_friend = $id )    ORDER BY id DESC LIMIT 20";
             $data['list_user'] = $this->Account->query_sql($sql2);
 
+            $sql3 = "SELECT avatar,name,price,cate, accounts.id,text_intro FROM accounts INNER JOIN kol ON kol.id_user = accounts.id ";
+            $data['list_kol'] = $this->Account->query_sql($sql3);
             $data['list_js'] = [
                 'kol/community.js'
             ];
@@ -336,6 +338,69 @@ class Home extends CI_Controller
             $this->load->view('index', $data);
         } else {
             redirect('/dang-nhap/');
+        }
+    }
+
+    public function show_more_friend()
+    {
+        $id = $_SESSION['user']['id'];
+        $this->load->helper(['pagination']);
+        $page = $this->input->post('page');
+        $page = 20 * ($page - 1);
+        $type = $this->input->post('type');
+        if ($type == 2) {
+            $sql = "SELECT accounts.id,username,avatar,name FROM `accounts` JOIN friend ON friend.id_user = accounts.id OR friend.id_friend = accounts.id WHERE accounts.id != $id AND ( id_user = $id OR id_friend = $id ) GROUP by id  LIMIT $page, 20";
+            $p = '<p class="btn_user">Xóa bạn bè</p>';
+        } else {
+            $sql = "SELECT accounts.id,username,avatar,name FROM `accounts` WHERE id NOT IN   ( SELECT id_user FROM friend WHERE id_user = $id OR id_friend = $id ) AND  id NOT IN   ( SELECT id_friend FROM friend WHERE id_user = $id OR id_friend = $id )    ORDER BY id DESC LIMIT $page, 20";
+            $p = '<p class="btn_user">Thêm bạn bè</p>';
+        }
+        $list = $this->Account->query_sql($sql);
+        $html = '';
+        if ($list != null) {
+            foreach ($list as $val) {
+                $html .= '
+                            <div class="this_user_list">
+                                <img src="/' . $val['avatar'] . '" alt="' . $val['name'] . '">
+                                <div class="detail_user">
+                                    <p class="name_user">' . $val['name'] . '</p>
+                                    <div class="list_box_user" data-id="' . $val['id'] . '">
+                                        ' . $p . '
+                                        <p class="btn_user chat_user">Nhắn tin</p>
+                                    </div>
+                                </div>
+                            </div>';
+            }
+            $next = 0;
+            if (count($list) == 20) {
+                $next = 1;
+            }
+            $response = [
+                'status' => 1,
+                'html' => $html,
+                'next' => $next
+            ];
+        } else {
+            $response = [
+                'status' => 0,
+            ];
+        }
+        echo json_encode($response);
+    }
+    public function xoa_anh()
+    {
+        foreach (glob("assets/files/post/*.jpg") as $filename) {
+            // echo $filename . '<br>';
+            $name = str_replace('assets/files/post/', '', $filename);
+            $name = str_replace('.jpg', '', $name);
+            $arr = (explode('-', $name));
+            $sql = "SELECT id_post FROM posts  WHERE id_post = '$name' AND status = 1";
+            $acc = $this->Account->query_sql_row($sql);
+            if ($acc != null) {
+                // $post = glob("assets/files/post/" . $name . "-*");
+                // $post = glob("assets/files/post_tmdt/" . $val . "-*");
+                @unlink($filename);
+            }
         }
     }
     // public function index()

@@ -138,25 +138,25 @@ class SendController extends CI_Controller
         $id = $this->input->post('id');
         if ($id != $_SESSION['user']['id']) {
             $user = $this->Messagemodel->getIndividual($id);
-            if ($user['user_type'] == 2) {
-                $url = getimagesize(base_url() . $user['avatar']);
-                if (is_array($url)) {
-                    $img = '/' . $user['avatar'];
-                } else {
-                    $img = '/images/avt.png';
-                }
-                $response = [
-                    'status' => 1,
-                    'image' => $img,
-                    'id' => $user['id'],
-                    'name' => ($user['name'] != '') ? $user['name'] : 'No name',
-                    'type' => $user['user_type']
-                ];
+            // if ($user['user_type'] == 2) {
+            $url = getimagesize(base_url() . $user['avatar']);
+            if (is_array($url)) {
+                $img = '/' . $user['avatar'];
             } else {
-                $response = [
-                    'status' => 0,
-                ];
+                $img = '/images/avt.png';
             }
+            $response = [
+                'status' => 1,
+                'image' => $img,
+                'id' => $user['id'],
+                'name' => ($user['name'] != '') ? $user['name'] : 'No name',
+                'type' => $user['user_type']
+            ];
+            // } else {
+            //     $response = [
+            //         'status' => 0,
+            //     ];
+            // }
         } else {
             $response = [
                 'status' => 0,
