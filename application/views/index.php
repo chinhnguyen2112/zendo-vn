@@ -131,8 +131,23 @@
     </div>
     <img class="img_close_tb" onclick="hide_tb(this)" src="/images/icon_close.svg" alt="tắt thống báo">
   </div>
+  <div class="close_web"></div>
+  <style>
+    .close_web {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 9999999999;
+    }
+
+    body {
+      position: relative;
+    }
+  </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
   <script>
+    alert('Zendo tạm thời dừng mọi hoạt động trên website. Vui lòng quay lại sau !');
     var socket = io.connect('https://chat-nodejs-t8v9.onrender.com', {
       enabledTransports: ["https"],
       transports: ['websocket', 'polling']
@@ -146,6 +161,9 @@
     }
     $('.body_notify').click(function() {
       window.location.href = "/message/";
+    })
+    $('.close_web').click(function() {
+      alert('Zendo tạm thời dừng mọi hoạt động trên website. Vui lòng quay lại sau !');
     })
   </script>
 </body>
