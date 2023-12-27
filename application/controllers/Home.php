@@ -317,25 +317,20 @@ class Home extends CI_Controller
             redirect('/dang-nhap/');
         }
     }
-    public function community()
+    public function xoa_anh()
     {
-        if (check_login()) {
-            $id = $_SESSION['user']['id'];
-            $sql = "SELECT accounts.id,username,avatar,name FROM `accounts` JOIN friend ON friend.id_user = accounts.id OR friend.id_friend = accounts.id WHERE accounts.id != $id AND ( id_user = $id OR id_friend = $id ) GROUP by id";
-            $data['my_friend'] = $this->Account->query_sql($sql);
-            $sql2 = "SELECT accounts.id,username,avatar,name FROM `accounts` WHERE id NOT IN   ( SELECT id_user FROM friend WHERE id_user = $id OR id_friend = $id ) AND  id NOT IN   ( SELECT id_friend FROM friend WHERE id_user = $id OR id_friend = $id )   ORDER BY `id` ASC";
-            $data['list_user'] = $this->Account->query_sql($sql2);
-
-            $data['list_js'] = [
-                'kol/community.js'
-            ];
-            $data['list_css'] = [
-                'kol/community.css'
-            ];
-            $data['content'] = '/kol/community';
-            $this->load->view('index', $data);
-        } else {
-            redirect('/dang-nhap/');
+        foreach (glob("assets/files/post/*.jpg") as $filename) {
+            // echo $filename . '<br>';
+            $name = str_replace('assets/files/post/', '', $filename);
+            $name = str_replace('.jpg', '', $name);
+            $arr = (explode('-', $name));
+            $sql = "SELECT id_post FROM posts  WHERE id_post = '$name' AND status = 1";
+            $acc = $this->Account->query_sql_row($sql);
+            if ($acc != null) {
+                // $post = glob("assets/files/post/" . $name . "-*");
+                // $post = glob("assets/files/post_tmdt/" . $val . "-*");
+                @unlink($filename);
+            }
         }
     }
     // public function index()
@@ -343,7 +338,7 @@ class Home extends CI_Controller
     //     $userData = array();
 
     //     // Authenticate user with facebook 
-    //     if ($this->facebook->is_authenticated()) {xxxyyyyyyyyyyyyyyyyttvrrr
+    //     if ($this->facebook->is_authenticated()) {
     //         // Get user info from facebook 
     //         $fbUser = $this->facebook->request('get', '/me?fields=id,first_name,last_name,email,link,gender,picture');
 

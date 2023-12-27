@@ -90,7 +90,6 @@ $menu_cate = $CI->Account->query_sql($sql_category);
                 <span>Giải trí</span>
                 <img class="img_down box_btn_header_mb" src="<?= site_main(); ?>images/home/arrow-bottom.png" alt="xem thêm">
                 <div class="menu_con">
-                    <p><span><a href="/cong-dong/"><span class="menu_span">Cộng đồng</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                     <p><span><a href="/danh-sach-idol/"><span class="menu_span">Thuê Playdoul</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                     <p><span><a href="/ve-so-may-man/"><span class="menu_span">Vé số may mắn</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                     <p><span><a href="/vong-quay-lien-quan/"><span class="menu_span">Vòng quay Liên Quân</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
@@ -210,7 +209,6 @@ $menu_cate = $CI->Account->query_sql($sql_category);
                 <img class="img_down box_btn_header_mb" src="<?= site_main(); ?>images/home/arrow-bottom.png" alt="xem thêm">
             </div>
             <div class="menu_con">
-                <p><span><a href="/cong-dong/"><span class="menu_span">Cộng đồng</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                 <p><span><a href="/danh-sach-idol/"><span class="menu_span">Thuê Playdoul</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                 <p><span><a href="/ve-so-may-man/"><span class="menu_span">Vé số may mắn</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>
                 <p><span><a href="/vong-quay-lien-quan/"><span class="menu_span">Vòng quay Liên Quân</span><img class="img_goto_link " src="<?= site_main(); ?>images/home/arrow-right.svg" alt="đi tới"></a></span></p>

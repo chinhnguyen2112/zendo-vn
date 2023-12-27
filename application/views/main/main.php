@@ -105,7 +105,7 @@
                         <div class="ds_acc">
                             <div class="entry-content">
                                 <?php foreach ($acc_lq as $key => $val) {
-                                     if ($val['user_id'] > 0) {
+                                    if ($val['user_id'] > 0) {
                                         $source_url = $this->Account->query_sql_row("SELECT source FROM accounts  WHERE id ='{$val['user_id']}'");
                                         $url_img = site_post($source_url['source']);
                                     } else {
@@ -113,7 +113,7 @@
                                     } ?>
                                     <div class="box__list_danhmuc box__list_danhmuc_edit">
                                         <a href="/tai-khoan-<?= $val['id_post'] ?>/">
-                                            <img src="<?=$url_img?>assets/files/thumb/<?= $val['id_post'] ?>.jpg" alt="chi tiết acc" class="image-thumnail">
+                                            <img src="<?= $url_img ?>assets/files/thumb/<?= $val['id_post'] ?>.jpg" alt="chi tiết acc" class="image-thumnail">
                                             <div class="tag"><img src="<?= site_main() ?>images/tag/tag_vip.png" /></div>
 
 
@@ -253,7 +253,7 @@
                     </div>
                     <div class="box-thanh-toan dis-flex commom-row">
                         <div class="item-tt1 mb-d-flex">
-                            <p class="font_clor_w font_size32 line-hei48">Giảm giá hấp dẫn khi thanh toán bằng ATM và MOMO</p>
+                            <p class="font_clor_w font_size32 line-hei48">Giảm giá hấp dẫn khi thanh toán bằng ATM và MOMO được tài trợ bởi <a href="https://sic88.win/" target="_blank" rel="noopener noreferrer">Sic88</a> </p>
                         </div>
                         <div class="box-nh dis-flex">
                             <div class="item-momo item-tt-cont">

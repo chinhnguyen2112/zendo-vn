@@ -364,53 +364,46 @@ class Kol extends CI_Controller
     public function thue_kol()
 
     {
-        if (check_login()) {
-            $id = $_SESSION['user']['id'];
-            $amount = $this->input->post('amount');
-            $id_kol = $this->input->post('id_kol');
-            $data_kol = $this->Account->get_by_id(['id_user' => $id_kol], 'kol');
-            $kol = $this->Account->get_by_id(['id' => $id_kol, 'user_type' => 2], 'accounts');
-            if ($data_kol != null && $kol != null) {
-                $price = $data_kol['price'];
-                $money = $amount * $price;
-                $check_amount =  $this->Account->get_by_id(['id' => $id, 'cash >=' => $money], 'accounts');
-                if ($check_amount != null) {
-                    $new_cash = $check_amount['cash'] - $money;
-                    if ($new_cash >= 0) {
-                        $where_update = [
-                            'id' => $id
+        $id = $_SESSION['user']['id'];
+        $amount = $this->input->post('amount');
+        $id_kol = $this->input->post('id_kol');
+        $data_kol = $this->Account->get_by_id(['id_user' => $id_kol], 'kol');
+        $kol = $this->Account->get_by_id(['id' => $id_kol, 'user_type' => 2], 'accounts');
+        if ($data_kol != null && $kol != null) {
+            $price = $data_kol['price'];
+            $money = $amount * $price;
+            $check_amount =  $this->Account->get_by_id(['id' => $id, 'cash >=' => $money], 'accounts');
+            if ($check_amount != null) {
+                $new_cash = $check_amount['cash'] - $money;
+                if ($new_cash >= 0) {
+                    $where_update = [
+                        'id' => $id
+                    ];
+                    $data_update = [
+                        'cash' => $new_cash,
+                    ];
+                    $update = $this->Account->update($where_update, $data_update, 'accounts');
+                    if ($update) {
+                        $data_insert = [
+                            'id_kol' => $id_kol,
+                            'id_user' => $id,
+                            'hours' => $amount,
+                            'price' => $price,
+                            'status' => 0,
+                            'created_at' => time(),
+                            'updated_at' => time(),
                         ];
-                        $data_update = [
-                            'cash' => $new_cash,
-                        ];
-                        $update = $this->Account->update($where_update, $data_update, 'accounts');
-                        if ($update) {
-                            $data_insert = [
-                                'id_kol' => $id_kol,
-                                'id_user' => $id,
-                                'hours' => $amount,
-                                'price' => $price,
-                                'status' => 0,
-                                'created_at' => time(),
-                                'updated_at' => time(),
+                        $insert = $this->Account->insert($data_insert, 'thue_kol');
+                        if ($insert > 0) {
+                            $response = [
+                                'status' => 1,
+                                'mess' => "thuê thành công"
                             ];
-                            $insert = $this->Account->insert($data_insert, 'thue_kol');
-                            if ($insert > 0) {
-                                $response = [
-                                    'status' => 1,
-                                    'mess' => "thuê thành công"
-                                ];
-                            } else {
-                                $data_update = [
-                                    'cash' => $check_amount['cash'],
-                                ];
-                                $update_new = $this->Account->update($where_update, $data_update, 'accounts');
-                                $response = [
-                                    'status' => 0,
-                                    'mess' => "Thuê thất bại"
-                                ];
-                            }
                         } else {
+                            $data_update = [
+                                'cash' => $check_amount['cash'],
+                            ];
+                            $update_new = $this->Account->update($where_update, $data_update, 'accounts');
                             $response = [
                                 'status' => 0,
                                 'mess' => "Thuê thất bại"
@@ -418,8 +411,8 @@ class Kol extends CI_Controller
                         }
                     } else {
                         $response = [
-                            'status' => 2,
-                            'mess' => "Không đủ tiền"
+                            'status' => 0,
+                            'mess' => "Thuê thất bại"
                         ];
                     }
                 } else {
@@ -430,14 +423,14 @@ class Kol extends CI_Controller
                 }
             } else {
                 $response = [
-                    'status' => 3,
-                    'mess' => "KOL không tồn tại"
+                    'status' => 2,
+                    'mess' => "Không đủ tiền"
                 ];
             }
         } else {
             $response = [
-                'status' => 4,
-                'mess' => "Chưa đăng nhập"
+                'status' => 3,
+                'mess' => "KOL không tồn tại"
             ];
         }
         echo json_encode($response);

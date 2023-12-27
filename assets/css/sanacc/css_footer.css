@@ -252,16 +252,35 @@ span.chi_nhanh {
     color: #31afd2;
     font-weight: 600;
 }
-.lh_mess{display: none;}
-.fb_dialog:last-child{
+
+.lh_mess {
+    display: none;
+}
+
+.fb_dialog:last-child {
     /* display: none !important; */
 }
 
+.box_textlink {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item_content_link {
+    border-left: 1px solid #fff;
+    padding-left: 6px;
+}
+
+.item_content_link:first-child {
+    border-left: none;
+}
 
 @media only screen and (max-width: 1366px) {
     footer {
         padding: 60px 100px 0px 100px;
     }
+
     .ft_bot {
         padding: 23px 100px;
         margin-left: -100px;
@@ -273,6 +292,7 @@ span.chi_nhanh {
     footer {
         padding: 60px 75px 0px 75px;
     }
+
     .ft_bot {
         padding: 23px 75px;
         margin-left: -75px;
@@ -284,31 +304,39 @@ span.chi_nhanh {
     footer {
         padding: 40px 50px 0px 50px;
     }
+
     .ft_bot {
         padding: 23px 50px;
         margin-left: -50px;
         margin-right: -50px;
     }
+
     .content_ft_1 {
         width: 100%;
         display: flex;
         margin-bottom: 20px;
     }
+
     .content_footer {
         flex-wrap: wrap;
     }
+
     .container_box_1 {
         margin-left: 20px;
     }
+
     .text_ft_2 p {
         width: 240px;
     }
+
     .text_ft_3 p {
         width: 148px;
     }
+
     img.logo_footer {
         height: 84px;
     }
+
     .content_ft_2,
     .content_ft_3,
     .content_ft_4 {
@@ -320,11 +348,13 @@ span.chi_nhanh {
     footer {
         padding: 30px 25px 0px 25px;
     }
+
     img.logo_footer {
         height: auto;
         margin: auto;
         /* margin-left: 10%; */
     }
+
     .ft_bot {
         flex-direction: column-reverse;
         align-content: center;
@@ -334,35 +364,43 @@ span.chi_nhanh {
         /* margin-bottom: 57px; */
         margin-right: -25px;
     }
+
     .ft_bot span {
         margin: auto;
     }
+
     .ft_bot .list_icon_bot {
         width: max-content;
         margin: auto;
         margin-bottom: 10px;
     }
+
     .container_box_1 {
         margin-left: 0px;
     }
+
     .content_ft_1 {
         /* display: block; */
         margin: auto;
         flex-direction: column;
         margin-bottom: 20px;
     }
+
     .text_ft_2 p {
         width: 100%;
     }
+
     .lh_call span {
         display: block;
     }
+
     .lh_call {
         display: flex;
         margin-top: 15px;
         flex-direction: column;
         align-items: center;
     }
+
     .lienhe {
         right: 0;
         bottom: 0px;
@@ -371,38 +409,48 @@ span.chi_nhanh {
         width: 100%;
         justify-content: space-around;
     }
+
     .lienhe img {
         width: 40px;
     }
+
     .lh_call {
         margin-top: 15px;
     }
+
     .lienhe {
         padding-bottom: 8px;
     }
+
     span.tru_so {
         /* width: 115px; */
     }
+
     span.chi_nhanh {
         /* width: 130px; */
     }
+
     .text_diachi p {
         display: flex;
         flex-direction: column;
     }
+
     .address_cty img {
         display: none;
     }
+
     .fb_dialog_content iframe:first-child {
         right: 17.5% !important;
-        width:40px !important;
+        width: 40px !important;
         bottom: 29px !important;
-        height:40px !important;
+        height: 40px !important;
     }
-    .lh_mess a{
+
+    .lh_mess a {
         display: none !important;
     }
 }
+
 .span_game_sell {
     margin: 20px 0px;
     /*text-align: center;*/

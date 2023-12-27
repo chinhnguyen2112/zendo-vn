@@ -59,416 +59,431 @@ class Ajax extends CI_Controller
     }
     public function register_sell()
     {
-        $email = $this->input->post('email');
-        $name = $this->input->post('name');
-        $phone = $this->input->post('phone');
-        $pass = md5($this->input->post('pass'));
-        $date_check = date('H:i:s', time());
-        $where_rgt = [
-            'username' => $name,
-            'email' => $email,
-            'phone' => $phone
-        ];
-        $check_register = $this->Account->check_register($where_rgt);
-        if ($check_register > 0) {
-            $response = [
-                'status' => 0,
-                'mess' => 'Tên tài khoản, email hoặc số điện thoại đã được sử dụng, vui lòng kiểm tra lại.'
-            ];
-        } else {
-            $code = rand(100000, 999999);
-            $count = 1; // nếu không vào khung giờ vàng tặng 1 lượt
-            if (($date_check >= '11:00:00' && $date_check < '12:00:00') || ($date_check > '20:00:00' && $date_check < '21:00:00')) { // check đăng ký có vào khung giờ vàng hay không
-                $count = 3; // nếu vào khung giờ vàng tặng 3 lượt quay
+        // $email = $this->input->post('email');
+        // $name = $this->input->post('name');
+        // $phone = $this->input->post('phone');
+        // $pass = md5($this->input->post('pass'));
+        // $date_check = date('H:i:s', time());
+        // $where_rgt = [
+        //     'username' => $name,
+        //     'email' => $email,
+        //     'phone' => $phone
+        // ];
+        // $check_register = $this->Account->check_register($where_rgt);
+        // if ($check_register > 0) {
+        //     $response = [
+        //         'status' => 0,
+        //         'mess' => 'Tên tài khoản, email hoặc số điện thoại đã được sử dụng, vui lòng kiểm tra lại.'
+        //     ];
+        // } else {
+        //     $code = rand(100000, 999999);
+        //     $count = 1; // nếu không vào khung giờ vàng tặng 1 lượt
+        //     if (($date_check >= '11:00:00' && $date_check < '12:00:00') || ($date_check > '20:00:00' && $date_check < '21:00:00')) { // check đăng ký có vào khung giờ vàng hay không
+        //         $count = 3; // nếu vào khung giờ vàng tặng 3 lượt quay
 
-            }
-            $date = date('Y-m-d H-i-s', time());
-            $data_insert = [
-                'username' => $name,
-                'password' => $pass,
-                'email' => $email,
-                'code' => $code,
-                'phone' => $phone,
-                'time' => $date,
-                'user_type' => 1
-            ];
-            if (this_source() != 'zendo') {
-                $data_insert['source'] = this_source();
-            }
-            $insert = $this->Account->insert($data_insert, 'accounts');
-            if ($insert > 0) {
-                $free_insert = [
-                    'user_id' => $insert,
-                    'count' => $count,
-                    'created_at' => time()
-                ];
-                $insert_free = $this->Account->insert($free_insert, 'history_luotquay_free');
-                $where = [
-                    'id' => $insert
-                ];
-                $get_user = $this->Account->get_detail_user($where);
-                $this->session->set_userdata('user', $get_user);
-                $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
-                $body_email = str_replace('%name%', $name, $body_email);
-                $body_email = str_replace('%email%', $email, $body_email);
-                $body_email = str_replace('%code%', $code, $body_email);
-                $send_mail = sendEmail($email, $name, 'Email thông báo đăng ký thành công tài khoản', $body_email);
-                if ($send_mail) {
-                    $response = [
-                        'status' => 1,
-                        'mess' => 'Đăng ký thành công.'
-                    ];
-                }
-            }
-        }
+        //     }
+        //     $date = date('Y-m-d H-i-s', time());
+        //     $data_insert = [
+        //         'username' => $name,
+        //         'password' => $pass,
+        //         'email' => $email,
+        //         'code' => $code,
+        //         'phone' => $phone,
+        //         'time' => $date,
+        //         'user_type' => 1
+        //     ];
+        //     if (this_source() != 'zendo') {
+        //         $data_insert['source'] = this_source();
+        //     }
+        //     $insert = $this->Account->insert($data_insert, 'accounts');
+        //     if ($insert > 0) {
+        //         $free_insert = [
+        //             'user_id' => $insert,
+        //             'count' => $count,
+        //             'created_at' => time()
+        //         ];
+        //         $insert_free = $this->Account->insert($free_insert, 'history_luotquay_free');
+        //         $where = [
+        //             'id' => $insert
+        //         ];
+        //         $get_user = $this->Account->get_detail_user($where);
+        //         $this->session->set_userdata('user', $get_user);
+        //         $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
+        //         $body_email = str_replace('%name%', $name, $body_email);
+        //         $body_email = str_replace('%email%', $email, $body_email);
+        //         $body_email = str_replace('%code%', $code, $body_email);
+        //         $send_mail = sendEmail($email, $name, 'Email thông báo đăng ký thành công tài khoản', $body_email);
+        //         if ($send_mail) {
+        //             $response = [
+        //                 'status' => 1,
+        //                 'mess' => 'Đăng ký thành công.'
+        //             ];
+        //         }
+        //     }
+        // }
+        $response = [
+            'status' => 0,
+            'mess' => 'Chức năng này dừng hoạt động'
+        ];
         echo json_encode($response);
     }
     public function register_user()
     {
-        $email = $this->input->post('email');
-        $name = $this->input->post('name');
-        $pass = md5($this->input->post('pass'));
-        $date_check = date('H:i:s', time());
-        $where_rgt = [
-            'username' => $name,
-            'email' => $email
-        ];
-        $check_register = $this->Account->check_register($where_rgt);
-        if ($check_register > 0) {
-            $response = [
-                'status' => 0,
-                'mess' => 'Tên tài khoản hoặc email  đã được sử dụng, vui lòng kiểm tra lại.'
-            ];
-        } else {
-            $code = rand(100000, 999999);
-            $count = 1; // nếu không vào khung giờ vàng tặng 1 lượt
-            if (($date_check >= '11:00:00' && $date_check < '12:00:00') || ($date_check > '20:00:00' && $date_check < '21:00:00')) { // check đăng ký có vào khung giờ vàng hay không
-                $count = 3; // nếu vào khung giờ vàng tặng 3 lượt quay
+        // $email = $this->input->post('email');
+        // $name = $this->input->post('name');
+        // $pass = md5($this->input->post('pass'));
+        // $date_check = date('H:i:s', time());
+        // $where_rgt = [
+        //     'username' => $name,
+        //     'email' => $email
+        // ];
+        // $check_register = $this->Account->check_register($where_rgt);
+        // if ($check_register > 0) {
+        //     $response = [
+        //         'status' => 0,
+        //         'mess' => 'Tên tài khoản hoặc email  đã được sử dụng, vui lòng kiểm tra lại.'
+        //     ];
+        // } else {
+        //     $code = rand(100000, 999999);
+        //     $count = 1; // nếu không vào khung giờ vàng tặng 1 lượt
+        //     if (($date_check >= '11:00:00' && $date_check < '12:00:00') || ($date_check > '20:00:00' && $date_check < '21:00:00')) { // check đăng ký có vào khung giờ vàng hay không
+        //         $count = 3; // nếu vào khung giờ vàng tặng 3 lượt quay
 
-            }
-            $date = date('Y-m-d H-i-s', time());
-            $data_insert = [
-                'username' => $name,
-                'password' => $pass,
-                'email' => $email,
-                'code' => $code,
-                'time' => $date
-            ];
-            if (this_source() != 'zendo') {
-                $data_insert['source'] = this_source();
-            }
-            $insert = $this->Account->insert($data_insert, 'accounts');
-            if ($insert > 0) {
-                $free_insert = [
-                    'user_id' => $insert,
-                    'count' => $count,
-                    'created_at' => time()
-                ];
-                $insert_free = $this->Account->insert($free_insert, 'history_luotquay_free');
-                $where = [
-                    'id' => $insert
-                ];
-                $get_user = $this->Account->get_detail_user($where);
-                $this->session->set_userdata('user', $get_user);
-                $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
-                $body_email = str_replace('%name%', $name, $body_email);
-                $body_email = str_replace('%email%', $email, $body_email);
-                $body_email = str_replace('%code%', $code, $body_email);
-                // echo $body_email;die;
-                $send_mail = sendEmail($email, $name, 'Email thông báo đăng ký thành công tài khoản', $body_email);
-                if ($send_mail) {
-                    $response = [
-                        'status' => 1,
-                        'mess' => 'Đăng ký thành công.'
-                    ];
-                }
-            }
-        }
+        //     }
+        //     $date = date('Y-m-d H-i-s', time());
+        //     $data_insert = [
+        //         'username' => $name,
+        //         'password' => $pass,
+        //         'email' => $email,
+        //         'code' => $code,
+        //         'time' => $date
+        //     ];
+        //     if (this_source() != 'zendo') {
+        //         $data_insert['source'] = this_source();
+        //     }
+        //     $insert = $this->Account->insert($data_insert, 'accounts');
+        //     if ($insert > 0) {
+        //         $free_insert = [
+        //             'user_id' => $insert,
+        //             'count' => $count,
+        //             'created_at' => time()
+        //         ];
+        //         $insert_free = $this->Account->insert($free_insert, 'history_luotquay_free');
+        //         $where = [
+        //             'id' => $insert
+        //         ];
+        //         $get_user = $this->Account->get_detail_user($where);
+        //         $this->session->set_userdata('user', $get_user);
+        //         $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
+        //         $body_email = str_replace('%name%', $name, $body_email);
+        //         $body_email = str_replace('%email%', $email, $body_email);
+        //         $body_email = str_replace('%code%', $code, $body_email);
+        //         // echo $body_email;die;
+        //         $send_mail = sendEmail($email, $name, 'Email thông báo đăng ký thành công tài khoản', $body_email);
+        //         if ($send_mail) {
+        //             $response = [
+        //                 'status' => 1,
+        //                 'mess' => 'Đăng ký thành công.'
+        //             ];
+        //         }
+        //     }
+        // }
+        // echo json_encode($response);
+        $response = [
+            'status' => 0,
+            'mess' => 'Chức năng này dừng hoạt động'
+        ];
         echo json_encode($response);
     }
     public function login()
     {
-        $date_check = date('H:i:s', time());
-        $str_time = time();
-        $name = $this->input->post('name');
-        $pass = md5($this->input->post('pass'));
-        $type = $this->input->post('type');
-        $where = [
-            'username' => $name,
-            'password' => $pass,
-            'block' => 0
+        // $date_check = date('H:i:s', time());
+        // $str_time = time();
+        // $name = $this->input->post('name');
+        // $pass = md5($this->input->post('pass'));
+        // $type = $this->input->post('type');
+        // $where = [
+        //     'username' => $name,
+        //     'password' => $pass,
+        //     'block' => 0
+        // ];
+        // if (this_source() != 'zendo') {
+        //     $where['source'] = this_source();
+        // } else {
+        //     $where['source IS NULL'] = null;
+        // }
+        // // var_dump($where);
+        // $check_user = $this->Account->get_detail_user($where);
+        // if (isset($check_user['id']) &&  $check_user['id'] > 0) {
+        //     if ($check_user['active'] == 1) {
+        //         // nếu đăng nhập vào giờ vàng
+        //         $id = $check_user['id'];
+        //         $event = 0;
+        //         $where_free = [
+        //             'user_id' => $id,
+        //             'count' => 3
+        //         ];
+        //         $check_his = $this->Account->get_luot_quay_free($where_free);
+        //         if ($date_check >= '11:00:00' && $date_check < '19:00:00') { // nếu đang vào khung giờ vàng đâu tiên
+        //             if (count($check_his) > 0) { // nếu đã có data
+        //                 $event = 0;
+        //                 if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
+        //                     $event = 1; //  
+        //                 } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
+        //                     if (date('H:i:s', $check_his['created_at']) < '19:00:00' && date('H:i:s', $check_his['created_at']) >= '11:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ nhất
+        //                         $event = 0; // 
+        //                     } else { // nếu chưa nhận vào khung giờ vàng đầu tiên
+        //                     }
+        //                 }
+        //             } else { // nếu chưa có data
+        //                 $event = 1;
+        //             }
+        //         } elseif ($date_check >= '20:00:00' && $date_check < '21:00:00') { // nếu đang vào khung giờ vàng thứ 2
+        //             if (count($check_his) > 0) { // nếu đã có data
+        //                 $event = 0;
+        //                 if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
+        //                     $event = 1; //  
+        //                 } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
+        //                     if (date('H:i:s', $check_his['created_at']) < '21:00:00' && date('H:i:s', $check_his['created_at']) >= '20:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ hai
+        //                         $event = 0; // 
+        //                     } else { // nếu chưa nhận vào khung giờ vàng  thứ 2
+        //                         $event = 1; // 
+        //                     }
+        //                 }
+        //             } else { // nếu chưa có data
+        //                 $event = 1;
+        //             }
+        //         }
+        //         if ($event == 1) {
+        //             $data_insert = [
+        //                 'user_id' => $id,
+        //                 'count' => 3,
+        //                 'created_at' => time()
+        //             ];
+        //             $insert_free = $this->Account->insert($data_insert, 'history_luotquay_free');
+        //             if ($insert_free > 0) {
+        //                 $luot_quay_new =   $check_user['luotquay_free'] + 3;
+        //                 $where_update = [
+        //                     'id' => $id
+        //                 ];
+        //                 $data_update = [
+        //                     'luotquay_free' => $luot_quay_new
+        //                 ];
+        //                 $check_user['luotquay_free'] = $luot_quay_new;
+        //                 $update_free = $this->Account->update($where_update, $data_update, 'accounts');
+        //             }
+        //         }
+        //         $_SESSION['user'] = $check_user;
+        //         $this->check_login($id);
+        //         $response = [
+        //             'status' => 1,
+        //             'mess' => 'Đăng nhập thành công.'
+        //         ];
+        //     } else {
+        //         $_SESSION['user'] = $check_user; //lưu session id fb
+        //         $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
+        //         $body_email = str_replace('%name%', $check_user['username'], $body_email);
+        //         $body_email = str_replace('%email%', $check_user['email'], $body_email);
+        //         $body_email = str_replace('%code%', $check_user['code'], $body_email);
+        //         sendEmail($check_user['email'], $check_user['username'], 'Email thông báo đăng ký thành công tài khoản', $body_email);
+        //         $response = [
+        //             'status' => 2,
+        //             'mess' => 'Tài khoản chưa xác thực. Chúng tôi đã gửi mã xác thực qua email đăng ký của bạn. Vui lòng kiểm tra hộp thử để có mã xác thực.'
+        //         ];
+        //     }
+        // } else {
+        //     $response = [
+        //         'status' => 0,
+        //         'mess' => 'Sai tài khoản hoặc mật khẩu.'
+        //     ];
+        // }
+        // echo json_encode($response);
+        $response = [
+            'status' => 0,
+            'mess' => 'Chức năng này dừng hoạt động'
         ];
-        if (this_source() != 'zendo') {
-            $where['source'] = this_source();
-        } else {
-            $where['source IS NULL'] = null;
-        }
-        // var_dump($where);
-        $check_user = $this->Account->get_detail_user($where);
-        if (isset($check_user['id']) &&  $check_user['id'] > 0) {
-            if ($check_user['active'] == 1) {
-                // nếu đăng nhập vào giờ vàng
-                $id = $check_user['id'];
-                $event = 0;
-                $where_free = [
-                    'user_id' => $id,
-                    'count' => 3
-                ];
-                $check_his = $this->Account->get_luot_quay_free($where_free);
-                if ($date_check >= '11:00:00' && $date_check < '19:00:00') { // nếu đang vào khung giờ vàng đâu tiên
-                    if (count($check_his) > 0) { // nếu đã có data
-                        $event = 0;
-                        if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
-                            $event = 1; //  
-                        } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
-                            if (date('H:i:s', $check_his['created_at']) < '19:00:00' && date('H:i:s', $check_his['created_at']) >= '11:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ nhất
-                                $event = 0; // 
-                            } else { // nếu chưa nhận vào khung giờ vàng đầu tiên
-                            }
-                        }
-                    } else { // nếu chưa có data
-                        $event = 1;
-                    }
-                } elseif ($date_check >= '20:00:00' && $date_check < '21:00:00') { // nếu đang vào khung giờ vàng thứ 2
-                    if (count($check_his) > 0) { // nếu đã có data
-                        $event = 0;
-                        if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
-                            $event = 1; //  
-                        } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
-                            if (date('H:i:s', $check_his['created_at']) < '21:00:00' && date('H:i:s', $check_his['created_at']) >= '20:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ hai
-                                $event = 0; // 
-                            } else { // nếu chưa nhận vào khung giờ vàng  thứ 2
-                                $event = 1; // 
-                            }
-                        }
-                    } else { // nếu chưa có data
-                        $event = 1;
-                    }
-                }
-                if ($event == 1) {
-                    $data_insert = [
-                        'user_id' => $id,
-                        'count' => 3,
-                        'created_at' => time()
-                    ];
-                    $insert_free = $this->Account->insert($data_insert, 'history_luotquay_free');
-                    if ($insert_free > 0) {
-                        $luot_quay_new =   $check_user['luotquay_free'] + 3;
-                        $where_update = [
-                            'id' => $id
-                        ];
-                        $data_update = [
-                            'luotquay_free' => $luot_quay_new
-                        ];
-                        $check_user['luotquay_free'] = $luot_quay_new;
-                        $update_free = $this->Account->update($where_update, $data_update, 'accounts');
-                    }
-                }
-                $_SESSION['user'] = $check_user;
-                $this->check_login($id);
-                $response = [
-                    'status' => 1,
-                    'mess' => 'Đăng nhập thành công.'
-                ];
-            } else {
-                $_SESSION['user'] = $check_user; //lưu session id fb
-                $body_email = file_get_contents('https://zendo.vn/email_tmp/dangky.html');
-                $body_email = str_replace('%name%', $check_user['username'], $body_email);
-                $body_email = str_replace('%email%', $check_user['email'], $body_email);
-                $body_email = str_replace('%code%', $check_user['code'], $body_email);
-                sendEmail($check_user['email'], $check_user['username'], 'Email thông báo đăng ký thành công tài khoản', $body_email);
-                $response = [
-                    'status' => 2,
-                    'mess' => 'Tài khoản chưa xác thực. Chúng tôi đã gửi mã xác thực qua email đăng ký của bạn. Vui lòng kiểm tra hộp thử để có mã xác thực.'
-                ];
-            }
-        } else {
-            $response = [
-                'status' => 0,
-                'mess' => 'Sai tài khoản hoặc mật khẩu.'
-            ];
-        }
         echo json_encode($response);
     }
     public function login_fb()
     {
-        $id_user = 0;
-        $date_check = date('H:i:s', time());
-        // Authenticate user with facebook 
-        if ($this->facebook->is_authenticated()) {
-            // Get user info from facebook 
-            $fbUser = $this->facebook->request('get', '/me?fields=id,name,email');
-            // Preparing data for database insertion 
-            $userData['oauth_provider'] = 'facebook';
-            $userData['oauth_uid']    = !empty($fbUser['id']) ? $fbUser['id'] : '';;
-            $userData['name']    = !empty($fbUser['name']) ? $fbUser['name'] : '';
-            $userData['email']        = !empty($fbUser['email']) ? $fbUser['email'] : '';
-            // var_dump($userData);die;
-            // Insert or update user data to the database 
-            $userID = $this->Account->check_data(['username' => $userData['oauth_uid']], 'accounts');
-            // Check user data insert or update status 
-            if ($userID > 0) {
-                $data_user = $this->Account->get_by_id(['username' => $userData['oauth_uid']], 'accounts');
-                $id_user = $data_user['id'];
-            } else {
-                $data_insert = [
-                    'username' => $userData['oauth_uid'],
-                    'name' =>  $userData['name'],
-                    'email' => $userData['email'],
-                    'active' => 1,
-                    'time' => date('Y-m-d H:i:s')
-                ];
-                if (this_source() != 'zendo') {
-                    $data_insert['source'] = this_source();
-                }
-                $insert = $this->Account->insert($data_insert, 'accounts');
-                if ($insert > 0) {
-                    $id_user = $insert;
-                    $data_user = $this->Account->get_by_id(['id' => $insert], 'accounts');
-                }
-            }
-            if ($id_user > 0) {
-                // nếu đăng nhập vào giờ vàng
-                $id = $id_user;
-                $event = 0;
-                $where_free = [
-                    'user_id' => $id,
-                    'count' => 3
-                ];
-                $check_his = $this->Account->get_luot_quay_free($where_free);
-                if ($date_check >= '11:00:00' && $date_check < '19:00:00') { // nếu đang vào khung giờ vàng đâu tiên
-                    if (count((array)$check_his) > 0) { // nếu đã có data
-                        $event = 0;
-                        if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
-                            $event = 1; //  
-                        } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
-                            if (date('H:i:s', $check_his['created_at']) < '19:00:00' && date('H:i:s', $check_his['created_at']) >= '11:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ nhất
-                                $event = 0; // 
-                            } else { // nếu chưa nhận vào khung giờ vàng đầu tiên
+        // $id_user = 0;
+        // $date_check = date('H:i:s', time());
+        // // Authenticate user with facebook 
+        // if ($this->facebook->is_authenticated()) {
+        //     // Get user info from facebook 
+        //     $fbUser = $this->facebook->request('get', '/me?fields=id,name,email');
+        //     // Preparing data for database insertion 
+        //     $userData['oauth_provider'] = 'facebook';
+        //     $userData['oauth_uid']    = !empty($fbUser['id']) ? $fbUser['id'] : '';;
+        //     $userData['name']    = !empty($fbUser['name']) ? $fbUser['name'] : '';
+        //     $userData['email']        = !empty($fbUser['email']) ? $fbUser['email'] : '';
+        //     // var_dump($userData);die;
+        //     // Insert or update user data to the database 
+        //     $userID = $this->Account->check_data(['username' => $userData['oauth_uid']], 'accounts');
+        //     // Check user data insert or update status 
+        //     if ($userID > 0) {
+        //         $data_user = $this->Account->get_by_id(['username' => $userData['oauth_uid']], 'accounts');
+        //         $id_user = $data_user['id'];
+        //     } else {
+        //         $data_insert = [
+        //             'username' => $userData['oauth_uid'],
+        //             'name' =>  $userData['name'],
+        //             'email' => $userData['email'],
+        //             'active' => 1,
+        //             'time' => date('Y-m-d H:i:s')
+        //         ];
+        //         if (this_source() != 'zendo') {
+        //             $data_insert['source'] = this_source();
+        //         }
+        //         $insert = $this->Account->insert($data_insert, 'accounts');
+        //         if ($insert > 0) {
+        //             $id_user = $insert;
+        //             $data_user = $this->Account->get_by_id(['id' => $insert], 'accounts');
+        //         }
+        //     }
+        //     if ($id_user > 0) {
+        //         // nếu đăng nhập vào giờ vàng
+        //         $id = $id_user;
+        //         $event = 0;
+        //         $where_free = [
+        //             'user_id' => $id,
+        //             'count' => 3
+        //         ];
+        //         $check_his = $this->Account->get_luot_quay_free($where_free);
+        //         if ($date_check >= '11:00:00' && $date_check < '19:00:00') { // nếu đang vào khung giờ vàng đâu tiên
+        //             if (count((array)$check_his) > 0) { // nếu đã có data
+        //                 $event = 0;
+        //                 if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
+        //                     $event = 1; //  
+        //                 } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
+        //                     if (date('H:i:s', $check_his['created_at']) < '19:00:00' && date('H:i:s', $check_his['created_at']) >= '11:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ nhất
+        //                         $event = 0; // 
+        //                     } else { // nếu chưa nhận vào khung giờ vàng đầu tiên
 
-                            }
-                        }
-                    } else { // nếu chưa có data
-                        $event = 1;
-                    }
-                } elseif ($date_check >= '20:00:00' && $date_check < '21:00:00') { // nếu đang vào khung giờ vàng thứ 2
-                    if (count($check_his) > 0) { // nếu đã có data
-                        $event = 0;
-                        if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
-                            $event = 1; //  
+        //                     }
+        //                 }
+        //             } else { // nếu chưa có data
+        //                 $event = 1;
+        //             }
+        //         } elseif ($date_check >= '20:00:00' && $date_check < '21:00:00') { // nếu đang vào khung giờ vàng thứ 2
+        //             if (count($check_his) > 0) { // nếu đã có data
+        //                 $event = 0;
+        //                 if (date('d-m-Y', $check_his['created_at']) < date('d-m-Y', time())) { // nếu hôm nay chưa nhận
+        //                     $event = 1; //  
 
-                        } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
-                            if (date('H:i:s', $check_his['created_at']) < '21:00:00' && date('H:i:s', $check_his['created_at']) >= '20:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ hai
-                                $event = 0; // 
-                            } else { // nếu chưa nhận vào khung giờ vàng  thứ 2
-                                $event = 1; // 
-                            }
-                        }
-                    } else { // nếu chưa có data
-                        $event = 1;
-                    }
-                }
-                if ($event == 1) {
-                    $data_insert = [
-                        'user_id' => $id,
-                        'count' => 3,
-                        'created_at' => time()
-                    ];
-                    $insert_free = $this->Account->insert($data_insert, 'history_luotquay_free');
-                    if ($insert_free > 0) {
-                        $luot_quay_new =   $data_user['luotquay_free'] + 3;
-                        $where_update = [
-                            'id' => $id
-                        ];
-                        $data_update = [
-                            'luotquay_free' => $luot_quay_new
-                        ];
-                        $check_user['luotquay_free'] = $luot_quay_new;
-                        $update_free = $this->Account->update($where_update, $data_update, 'accounts');
-                    }
-                }
-                $data_user = $this->Account->get_by_id(['id' => $id_user], 'accounts');
-                $this->check_login($id);
-            }
-            $this->session->set_userdata('user', $data_user);
-            redirect('/');
-        } else {
-            redirect('/');
-        }
+        //                 } elseif (date('d-m-Y', $check_his['created_at']) == date('d-m-Y', time())) { // nếu hôm nay đã nhận
+        //                     if (date('H:i:s', $check_his['created_at']) < '21:00:00' && date('H:i:s', $check_his['created_at']) >= '20:00:00') { // nếu hôm nay đã nhận khung giờ vàng thứ hai
+        //                         $event = 0; // 
+        //                     } else { // nếu chưa nhận vào khung giờ vàng  thứ 2
+        //                         $event = 1; // 
+        //                     }
+        //                 }
+        //             } else { // nếu chưa có data
+        //                 $event = 1;
+        //             }
+        //         }
+        //         if ($event == 1) {
+        //             $data_insert = [
+        //                 'user_id' => $id,
+        //                 'count' => 3,
+        //                 'created_at' => time()
+        //             ];
+        //             $insert_free = $this->Account->insert($data_insert, 'history_luotquay_free');
+        //             if ($insert_free > 0) {
+        //                 $luot_quay_new =   $data_user['luotquay_free'] + 3;
+        //                 $where_update = [
+        //                     'id' => $id
+        //                 ];
+        //                 $data_update = [
+        //                     'luotquay_free' => $luot_quay_new
+        //                 ];
+        //                 $check_user['luotquay_free'] = $luot_quay_new;
+        //                 $update_free = $this->Account->update($where_update, $data_update, 'accounts');
+        //             }
+        //         }
+        //         $data_user = $this->Account->get_by_id(['id' => $id_user], 'accounts');
+        //         $this->check_login($id);
+        //     }
+        //     $this->session->set_userdata('user', $data_user);
+        //     redirect('/');
+        // } else {
+        //     redirect('/');
+        // }
+        redirect('/');
     }
     public function check_login($id)
     {
-        $where = [
-            'id' => $id
-        ];
-        $check_user = $this->Account->get_detail_user($where);
-        if (isset($check_user['id']) &&  $check_user['id'] > 0) {
-            // tặng zen
-            $time_day = strtotime(date('Y-m-d'));
-            $str_time = time();
-            $where_login = [
-                'id_user' => $id,
-                'created_at >=' => $time_day
-            ];
-            $check_login = $this->Account->check_data($where_login, 'login_zen');
-            if ($check_login < 1) { // nếu chưa đăng nhập
-                $zen_check = 100;
-                //check xem nhiệm vụ lần trước có hoàn thành hay không
-                $where_nv = [
-                    'id_user' => $id,
-                ];
-                $check_nv = $this->Account->get_nv_old($where_nv);
-                if ($check_nv['status'] == 1) {
-                    if ($check_nv['type'] == 0 && $check_user['luotquay'] > 0) {
-                        $luotquay = $check_user['luotquay'] - 1;
-                        $data_update = [
-                            'luotquay' => $luotquay
-                        ];
-                        $where_update = [
-                            'id' => $id
-                        ];
-                        $update_free = $this->Account->update($where_update, $data_update, 'accounts'); // trừ lượt quay acc
-                    }
-                    if ($check_nv['type'] == 1 && $check_user['luotquay9k'] > 0) {
-                        $luotquay = $check_user['luotquay9k'] - 1;
-                        $data_update = [
-                            'luotquay9k' => $luotquay
-                        ];
-                        $where_update = [
-                            'id' => $id
-                        ];
-                        $update_free = $this->Account->update($where_update, $data_update, 'accounts'); // trừ lượt quay quân huy
-                    }
-                    if ($check_nv['type'] == 2) {
-                        $zen_check = 150;
-                    }
-                }
-                // add nhiệm vụ trafic
-                $where_get_nv = [
-                    'status' => 1
-                ];
-                $check_trafic = $this->Account->get_rand_id($where_get_nv, 'id', 'link_trafic');
-                $id_trafic = $check_trafic['id'];
-                if (isset($check_nv['status']) && $check_nv['status'] == 0 && $check_nv['status_nv'] == 1) {
-                    $id_trafic = $check_nv['id_trafic'];
-                }
-                $data_insert = [
-                    'id_user' => $id,
-                    'id_trafic' => $id_trafic,
-                    'created_at' => time()
-                ];
-                $insert_login = $this->Account->insert($data_insert, 'login_zen');
-                if ($check_user['zen'] <= $zen_check) {
-                    $data_update_zen = [
-                        'zen' => 100
-                    ];
-                    $where_update_zen = [
-                        'id' => $id
-                    ];
-                    $update_free = $this->Account->update($where_update_zen, $data_update_zen, 'accounts'); // tặng zen
-                }
-            }
-        }
+        // $where = [
+        //     'id' => $id
+        // ];
+        // $check_user = $this->Account->get_detail_user($where);
+        // if (isset($check_user['id']) &&  $check_user['id'] > 0) {
+        //     // tặng zen
+        //     $time_day = strtotime(date('Y-m-d'));
+        //     $str_time = time();
+        //     $where_login = [
+        //         'id_user' => $id,
+        //         'created_at >=' => $time_day
+        //     ];
+        //     $check_login = $this->Account->check_data($where_login, 'login_zen');
+        //     if ($check_login < 1) { // nếu chưa đăng nhập
+        //         $zen_check = 100;
+        //         //check xem nhiệm vụ lần trước có hoàn thành hay không
+        //         $where_nv = [
+        //             'id_user' => $id,
+        //         ];
+        //         $check_nv = $this->Account->get_nv_old($where_nv);
+        //         if ($check_nv['status'] == 1) {
+        //             if ($check_nv['type'] == 0 && $check_user['luotquay'] > 0) {
+        //                 $luotquay = $check_user['luotquay'] - 1;
+        //                 $data_update = [
+        //                     'luotquay' => $luotquay
+        //                 ];
+        //                 $where_update = [
+        //                     'id' => $id
+        //                 ];
+        //                 $update_free = $this->Account->update($where_update, $data_update, 'accounts'); // trừ lượt quay acc
+        //             }
+        //             if ($check_nv['type'] == 1 && $check_user['luotquay9k'] > 0) {
+        //                 $luotquay = $check_user['luotquay9k'] - 1;
+        //                 $data_update = [
+        //                     'luotquay9k' => $luotquay
+        //                 ];
+        //                 $where_update = [
+        //                     'id' => $id
+        //                 ];
+        //                 $update_free = $this->Account->update($where_update, $data_update, 'accounts'); // trừ lượt quay quân huy
+        //             }
+        //             if ($check_nv['type'] == 2) {
+        //                 $zen_check = 150;
+        //             }
+        //         }
+        //         // add nhiệm vụ trafic
+        //         $where_get_nv = [
+        //             'status' => 1
+        //         ];
+        //         $check_trafic = $this->Account->get_rand_id($where_get_nv, 'id', 'link_trafic');
+        //         $id_trafic = $check_trafic['id'];
+        //         if (isset($check_nv['status']) && $check_nv['status'] == 0 && $check_nv['status_nv'] == 1) {
+        //             $id_trafic = $check_nv['id_trafic'];
+        //         }
+        //         $data_insert = [
+        //             'id_user' => $id,
+        //             'id_trafic' => $id_trafic,
+        //             'created_at' => time()
+        //         ];
+        //         $insert_login = $this->Account->insert($data_insert, 'login_zen');
+        //         if ($check_user['zen'] <= $zen_check) {
+        //             $data_update_zen = [
+        //                 'zen' => 100
+        //             ];
+        //             $where_update_zen = [
+        //                 'id' => $id
+        //             ];
+        //             $update_free = $this->Account->update($where_update_zen, $data_update_zen, 'accounts'); // tặng zen
+        //         }
+        //     }
+        // }
     }
     public function active()
     {
