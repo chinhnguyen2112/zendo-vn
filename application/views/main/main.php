@@ -253,7 +253,7 @@
                     </div>
                     <div class="box-thanh-toan dis-flex commom-row">
                         <div class="item-tt1 mb-d-flex">
-                            <p class="font_clor_w font_size32 line-hei48">Giảm giá hấp dẫn khi thanh toán bằng ATM và MOMO được tài trợ bởi <a href="https://sic88.win/" target="_blank" rel="noopener noreferrer">Sic88</a> </p>
+                            <p class="font_clor_w font_size32 line-hei48">Giảm giá hấp dẫn khi thanh toán bằng ATM và MOMO  </p>
                         </div>
                         <div class="box-nh dis-flex">
                             <div class="item-momo item-tt-cont">

@@ -30,7 +30,7 @@ $(".li_type_lq").click(function () {
     $(".sl_luotquay_free,.sl_luotquay,.sl_luotquay_9k,.sl_luotquay_20k").hide();
 
     if (type_play == "luotquay") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_acc.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_acc.png");
       //
       $(".buy_by_zen").show();
       $(".buy_spin_btn").css({
@@ -39,7 +39,7 @@ $(".li_type_lq").click(function () {
       $(".sl_luotquay").show();
       $(show_name).text("VÒNG QUAY SIÊU PHẨM");
     } else if (type_play == "luotquay9k") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_qh.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_qh.png");
       //
       $(".buy_by_zen").hide();
       $(".buy_spin_btn").css({
@@ -48,7 +48,7 @@ $(".li_type_lq").click(function () {
       $(".sl_luotquay_9k").show();
       $(show_name).text("VÒNG QUAY QUÂN HUY");
     } else if (type_play == "luotquay20k") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_skin.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_skin.png");
       //
       $(".buy_by_zen").hide();
       $(".buy_spin_btn").css({
@@ -57,7 +57,7 @@ $(".li_type_lq").click(function () {
       $(".sl_luotquay_20k").show();
       $(show_name).text("VÒNG QUAY TRANG PHỤC");
     } else if (type_play == "luotquay_free") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_random.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_random.png");
       //
       $(".buy_spin_btn").hide();
       $(".sl_luotquay_free").show();
@@ -66,7 +66,6 @@ $(".li_type_lq").click(function () {
     setTimeout(function () {
       $(".popup_load").hide();
     }, 500);
-
     $("#type_buy").val(type_play);
   }
 });
@@ -80,7 +79,7 @@ $("#change_type").change(function () {
     setCookies("this_play", type_play, 1);
     $(".sl_luotquay_free,.sl_luotquay,.sl_luotquay_9k,.sl_luotquay_20k").hide();
     if (type_play == "luotquay") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_acc.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_acc.png");
       //
       $(".buy_by_zen").show();
       $(".buy_spin_btn").css({
@@ -89,7 +88,7 @@ $("#change_type").change(function () {
       $(".sl_luotquay").show();
       $(show_name).text("VÒNG QUAY SIÊU PHẨM");
     } else if (type_play == "luotquay9k") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_qh.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_qh.png");
       //
       $(".buy_by_zen").hide();
       $(".buy_spin_btn").css({
@@ -98,7 +97,7 @@ $("#change_type").change(function () {
       $(".sl_luotquay_9k").show();
       $(show_name).text("VÒNG QUAY QUÂN HUY");
     } else if (type_play == "luotquay20k") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_skin.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_skin.png");
       //
       $(".buy_by_zen").hide();
       $(".buy_spin_btn").css({
@@ -107,7 +106,7 @@ $("#change_type").change(function () {
       $(".sl_luotquay_20k").show();
       $(show_name).text("VÒNG QUAY TRANG PHỤC");
     } else if (type_play == "luotquay_free") {
-      $(".img_spin_img").attr("src", site_main+"images/vqlq/vq_random.png");
+      $(".img_spin_img").attr("src", site_main + "images/vqlq/vq_random.png");
       //
       $(".buy_spin_btn").hide();
       $(".sl_luotquay_free").show();
@@ -405,12 +404,12 @@ $(".buy_by_vnd").click(function () {
       .find(".happy_gif")
       .text(
         "Bạn muốn mua " +
-          $("#count_buy").val() +
-          " lượt với " +
-          parseInt($("#val_buy").val()).toLocaleString(
-            window.document.documentElement.lang
-          ) +
-          " VNĐ"
+        $("#count_buy").val() +
+        " lượt với " +
+        parseInt($("#val_buy").val()).toLocaleString(
+          window.document.documentElement.lang
+        ) +
+        " VNĐ"
       );
     $(".popup_confirm").find(".btn_lg").attr("onclick", "buy_now(1)");
     $(".popup_confirm").show();
@@ -429,13 +428,13 @@ $(".buy_by_zen").click(function () {
       .find(".happy_gif")
       .text(
         "Bạn muốn mua " +
-          $("#count_buy").val() +
-          " lượt với " +
-          (
-            $("#val_buy").val() / 100 / 2 +
-            $("#val_buy").val() / 100
-          ).toLocaleString(window.document.documentElement.lang) +
-          " Zen"
+        $("#count_buy").val() +
+        " lượt với " +
+        (
+          $("#val_buy").val() / 100 / 2 +
+          $("#val_buy").val() / 100
+        ).toLocaleString(window.document.documentElement.lang) +
+        " Zen"
       );
     $(".popup_confirm").find(".btn_lg").attr("onclick", "buy_now(2)");
     $(".popup_confirm").show();
@@ -481,7 +480,7 @@ function buy_now(type) {
             setCookies(
               $("#type_buy").val(),
               parseInt(getCookie($("#type_buy").val())) +
-                parseInt($("#count_buy").val()),
+              parseInt($("#count_buy").val()),
               1
             );
 

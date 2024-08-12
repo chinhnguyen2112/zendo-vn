@@ -112,8 +112,6 @@ $s = date('s', $tgian);
                         <li class="li_type_lq" data-type="luotquay"><span class="span_type_lq">Vòng quay nick liên quân</span></li>
                         <li class="li_type_lq" data-type="luotquay9k"><span class="span_type_lq">Vòng quay quân huy</span></li>
                         <li class="li_type_lq" data-type="luotquay20k"><span class="span_type_lq">Vòng quay trang phục</span></li>
-                        <li style=" background: none;box-shadow: none; margin: 0.5vh 0; height: 4.3vh;list-style-type: none;"><span class="span_type_lq"></span></li>
-                        <li style=" background: none;box-shadow: none; margin: 0.5vh 0; height: 4.3vh;list-style-type: none;"><span class="span_type_lq"></span></li>
                     </div>
                     <div class="buy-turn" onclick="show_popup(6)">
                         <span class="buy_luot">MUA THÊM LƯỢT QUAY</span>
@@ -449,7 +447,9 @@ $s = date('s', $tgian);
 
     </div>
 </div>
-<style>
+<style>.notify_auto, .z_footer {
+    display: none;
+}
     .slick-track {
         width: max-content !important;
     }

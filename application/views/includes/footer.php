@@ -156,10 +156,19 @@
             </div>
         </footer>
         <ul class="box_textlink">
-            <li class="title_textlink">Liên kết hữu ích:</li>
-            <li class="item_content_link">Trực tiếp bóng đá
-                <a target="_blank" rel="dofollow" href="https://rakhoitv.win/"><b> rakhoitv</b></a>
-            </li>
+            <li class="">Liên kết hữu ích:</li>   
+                <li class="item_content_link" style="color:#1f2334">
+                    <a rel="dofollow" target="_blank" style="color:#1f2334" href="https://good88.best" ><b>good88</b></a>
+                </li>  
+                <li class="item_content_link" style="color:#1f2334">
+                    <a rel="dofollow" target="_blank" style="color:#1f2334" href="https://onlinecasinohub.us/" ><b>nhà cái uy tín</b></a> số 1 việt nam
+                </li>
+                <li class="item_content_link" style="color:#1f2334">
+                    <a rel="dofollow" target="_blank" style="color:#1f2334" href="https://keotop.com/" ><b>kèo nhà cái</b></a> keotop.com
+                </li>
+                <li class="item_content_link" style="color:#1f2334">
+                    <a rel="dofollow" target="_blank" style="color:#1f2334" href="https://helo88.bet" ><b>hello88</b></a>
+                </li>
         </ul>
         <div class="lienhe">
             <div class="lh_call lh_mess">

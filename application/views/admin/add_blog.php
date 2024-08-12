@@ -1,45 +1,43 @@
 <style>
+.form_change_pass {
+
+    width: 800px;
+
+    margin: auto;
+
+}
+
+
+
+.error {
+
+    font-size: 14px;
+
+    color: red;
+
+}
+
+
+
+.label {
+
+    width: 100%;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
 
     .form_change_pass {
-
-        width: 800px;
-
-        margin: auto;
-
-    }
-
-
-
-    .error {
-
-        font-size: 14px;
-
-        color: red;
-
-    }
-
-
-
-    .label {
 
         width: 100%;
 
     }
 
-
-
-
-
-    @media only screen and (max-width: 1024px) {
-
-        .form_change_pass {
-
-            width: 100%;
-
-        }
-
-    }
-
+}
 </style>
 
 <?php $CI = &get_instance();
@@ -68,7 +66,8 @@ $count = $CI->Account->query_sql($sql);
 
         <label class="label" for="name">Title (50 > 60 kí tụ)</label>
 
-        <input type="text" name="meta_title" value="<?= (isset($list)) ? $list['meta_title'] : ''; ?>" class="form-control">
+        <input type="text" name="meta_title" value="<?= (isset($list)) ? $list['meta_title'] : ''; ?>"
+            class="form-control">
 
     </div>
 
@@ -76,7 +75,8 @@ $count = $CI->Account->query_sql($sql);
 
         <label class="label" for="name">Keyword</label>
 
-        <input type="text" name="meta_key" id="meta_key" value="<?= (isset($list)) ? $list['meta_key'] : ''; ?>" oninput="show_alias(this.value)" class="form-control">
+        <input type="text" name="meta_key" id="meta_key" value="<?= (isset($list)) ? $list['meta_key'] : ''; ?>"
+            oninput="show_alias(this.value)" class="form-control">
 
     </div>
 
@@ -84,7 +84,8 @@ $count = $CI->Account->query_sql($sql);
 
         <label class="label" for="name">Đường dẫn thân thiện</label>
 
-        <input type="text" name="alias" value="<?= (isset($list)) ? $list['alias'] : ''; ?>" id="alias" readonly class="form-control">
+        <input type="text" name="alias" value="<?= (isset($list)) ? $list['alias'] : ''; ?>" id="alias" readonly
+            class="form-control">
 
     </div>
 
@@ -96,7 +97,7 @@ $count = $CI->Account->query_sql($sql);
 
             <?php foreach ($count as $key => $val) { ?>
 
-                <option <?php if (isset($list) &&  $list['chuyenmuc'] == $val['id']) {
+            <option <?php if (isset($list) &&  $list['chuyenmuc'] == $val['id']) {
 
                             echo 'selected';
 
@@ -144,13 +145,15 @@ $count = $CI->Account->query_sql($sql);
 
         <label class="label" for="name">Nội dung</label>
 
-        <textarea rows="5" cols="70" name="content" id="editor" ><?= (isset($list)) ? $list['content'] : ''; ?></textarea>
+        <textarea rows="5" cols="70" name="content"
+            id="editor"><?= (isset($list)) ? $list['content'] : ''; ?></textarea>
 
     </div>
 
     <div class="form-group">
 
-        <button type="submit" class="form-control btn btn-primary submit px-3"><?= (isset($id)) ? "Sửa" : "Thêm mới" ?></button>
+        <button type="submit"
+            class="form-control btn btn-primary submit px-3"><?= (isset($id)) ? "Sửa" : "Thêm mới" ?></button>
 
     </div>
 
@@ -163,169 +166,164 @@ $count = $CI->Account->query_sql($sql);
 <script src="/ckeditor/ckeditor.js"></script>
 
 <script defer type="text/javascript">
+//<![CDATA[
 
-    //<![CDATA[
+CKEDITOR.replace('editor');
 
-    CKEDITOR.replace('editor');
-
-    //]]>
-
+//]]>
 </script>
 
 <script defer type="text/javascript">
+//<![CDATA[
 
-    //<![CDATA[
+CKEDITOR.replace('sapo');
 
-    CKEDITOR.replace('sapo');
-
-    //]]>
-
+//]]>
 </script>
 
 <script>
+function get_alias(str) {
 
-    function get_alias(str) {
+    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
 
-        str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
 
-        str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
 
-        str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
 
-        str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
 
-        str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
 
-        str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+    str = str.replace(/đ/g, "d");
 
-        str = str.replace(/đ/g, "d");
+    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
 
-        str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
 
-        str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+    str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
 
-        str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
 
-        str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
 
-        str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
 
-        str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+    str = str.replace(/Đ/g, "D");
 
-        str = str.replace(/Đ/g, "D");
+    str = str.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, ' ');
 
-        str = str.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, ' ');
+    str = str.replace(/\s+/g, '-');
 
-        str = str.replace(/\s+/g, '-');
+    str = str.toLowerCase();
 
-        str = str.toLowerCase();
+    return str;
 
-        return str;
-
-    }
-
+}
 
 
-    function show_alias(str) {
 
-        var alias = get_alias(str);
+function show_alias(str) {
 
-        $("#alias").val(alias);
+    var alias = get_alias(str);
 
-    }
+    $("#alias").val(alias);
 
-    $("#form").validate({
+}
 
-        onclick: false,
+$("#form").validate({
 
-        rules: {
+    onclick: false,
 
-            "alias": {
+    rules: {
 
-                required: true,
+        "alias": {
 
-            },
+            required: true,
 
         },
 
-        messages: {
+    },
 
-            "alias": {
+    messages: {
 
-                required: "Chưa nhập alias.",
+        "alias": {
 
-            },
+            required: "Chưa nhập alias.",
 
         },
 
-        submitHandler: function(form) {
+    },
 
-            var data = new FormData($("#form")[0]);
+    submitHandler: function(form) {
 
-            $.ajax({
+        var data = new FormData($("#form")[0]);
+        data.append("content", CKEDITOR.instances.editor.getData());
+        data.append("sapo", CKEDITOR.instances.sapo.getData());
+        $.ajax({
 
-                url: '/admin/ajax_add_blog',
+            url: '/admin/ajax_add_blog',
 
-                type: "POST",
+            type: "POST",
 
-                cache: false,
+            cache: false,
 
-                contentType: false,
+            contentType: false,
 
-                processData: false,
+            processData: false,
 
-                dataType: "json",
+            dataType: "json",
 
-                data: data,
+            data: data,
 
-                success: function(response) {
+            success: function(response) {
 
-                    if (response.status == 1) {
+                if (response.status == 1) {
 
-                        swal({
+                    swal({
 
-                            title: "Thành Công",
+                        title: "Thành Công",
 
-                            type: "success",
+                        type: "success",
 
-                            text: response.msg
+                        text: response.msg
 
-                        }, function() {
-                            window.location = '/sitemap/?type=blog';
-                        });
+                    }, function() {
+                        window.location = '/sitemap/?type=blog';
+                    });
 
-                    } else {
+                } else {
 
-                        swal({
+                    swal({
 
-                            title: "Thất bại",
+                        title: "Thất bại",
 
-                            type: "error",
+                        type: "error",
 
-                            text: response.msg
+                        text: response.msg
 
-                        });
-
-                    }
-
-                },
-
-                error: function(xhr) {
-
-                    alert('Thất bại');
-
-
+                    });
 
                 }
 
-            });
+            },
 
-            return false;
+            error: function(xhr) {
 
-        }
+                alert('Thất bại');
 
-    });
 
+
+            }
+
+        });
+
+        return false;
+
+    }
+
+});
 </script>
 
 

@@ -112,6 +112,7 @@ class Blogs extends CI_Controller
             $data['img_head'] = 'https://zendo.vn/'.$get_id['image'];
             $data['count_category'] = $count_category;
             $data['content'] = '/blog/chuyenmuc';
+            $data['index'] = 1;
         } elseif ($get_id_game != null) {
             $title = $get_id_game['name'] . ' - Game bản quyền - Zendo Shop ';
             $url = str_replace('/', '', $_SERVER['REQUEST_URI']);
@@ -130,6 +131,7 @@ class Blogs extends CI_Controller
             $data['content'] = '/blog/chi_tiet_game_bq';
             $data['meta_title'] = $title;
             $data['img_head'] = 'https://zendo.vn/'.$get_id_game['image'];
+            $data['index'] = 1;
         } else {
             if(this_source() !='zendo'){
                 redirect('https://zendo.vn/'.$_SERVER['REQUEST_URI']);
@@ -155,11 +157,13 @@ class Blogs extends CI_Controller
                 $data['meta_title'] = $title;
                 $data['meta_keyword'] = $meta_keyword;
                 $data['img_head'] = $img_head;
+                if($blog['id'] != '3433'){
+                    $data['index'] = 1;
+                }
             }
         }
 
 
-        $data['index'] = 1;
         $this->load->view('index', $data);
     }
 }
